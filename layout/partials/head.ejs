@@ -19,13 +19,18 @@
 </script>
 <title><%= page.title ? `${page.title} | ${shit_value(theme.journal.short_name)}` : shit_value(theme.journal.full_name) %></title>
 <meta name="description" content="<%= shit_value(page.description || theme.journal.description) %><%= theme.style.include_satire_in_meta ? ' Satirical content notice applies.' : '' %>" />
-<meta property="og:title" content="<%= page.title || shit_value(theme.journal.full_name) %>" />
-<meta property="og:description" content="<%= shit_value(page.description || theme.journal.description) %>" />
-<meta property="og:type" content="<%= is_post() ? 'article' : 'website' %>" />
-<meta property="og:url" content="<%= shit_absolute_url(page.path || '') %>" />
-<meta property="og:image" content="<%= shit_absolute_url(theme.journal.logo) %>" />
-<meta name="twitter:card" content="summary_large_image" />
+<%- open_graph({
+  title: page.title || shit_value(theme.journal.full_name),
+  description: shit_value(page.description || theme.journal.description),
+  type: is_post() ? 'article' : 'website',
+  url: shit_absolute_url(page.path || ''),
+  image: shit_absolute_url(theme.journal.logo),
+  site_name: shit_value(theme.journal.full_name),
+  article: is_post() ? { published_time: page.date, modified_time: page.updated } : null,
+  twitter_card: 'summary_large_image'
+}) %>
 <link rel="canonical" href="<%= shit_absolute_url(page.path || '') %>" />
-<link rel="icon" href="<%= url_for(theme.journal.favicon) %>" />
-<link rel="alternate" type="application/rss+xml" title="<%= shit_value(theme.journal.short_name) %> RSS" href="<%= url_for('/atom.xml') %>" />
-<link rel="stylesheet" href="<%= url_for('/css/main.css') %>" />
+<%- favicon_tag(theme.journal.favicon) %>
+<%- feed_tag('atom.xml', { title: shit_value(theme.journal.short_name) + ' RSS' }) %>
+<link rel="stylesheet" href="<%- url_for('/css/main.css') %>">
+<link rel="stylesheet" href="<%- url_for('/css/tailwind.css') %>">
