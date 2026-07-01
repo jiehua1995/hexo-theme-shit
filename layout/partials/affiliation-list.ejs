@@ -1,0 +1,7 @@
+<% if (Array.isArray(post.affiliations) && post.affiliations.length) { %>
+  <ul class="affiliation-list">
+    <% post.affiliations.forEach((affiliation) => { %>
+      <li><%= affiliation.name || affiliation %></li>
+    <% }) %>
+  </ul>
+<% } %>

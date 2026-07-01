@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <circle cx="100" cy="100" r="98" fill="#1a2332"/>
+  <circle cx="100" cy="75" r="32" fill="#2d4a5e" stroke="#c4a84a" stroke-width="2"/>
+  <path d="M38 175c15-38 44-58 62-58s47 20 62 58" fill="#2d4a5e" stroke="#c4a84a" stroke-width="2"/>
+  <!-- Smart glasses -->
+  <rect x="82" y="66" width="16" height="12" rx="3" fill="none" stroke="#c4a84a" stroke-width="2"/>
+  <rect x="102" y="66" width="16" height="12" rx="3" fill="none" stroke="#c4a84a" stroke-width="2"/>
+  <line x1="98" y1="72" x2="102" y2="72" stroke="#c4a84a" stroke-width="1.5"/>
+  <!-- Data points inside glasses -->
+  <circle cx="88" cy="71" r="2" fill="#c4a84a" opacity="0.6"/>
+  <circle cx="110" cy="73" r="2" fill="#c4a84a" opacity="0.6"/>
+  <circle cx="94" cy="74" r="1.5" fill="#5a9abf" opacity="0.5"/>
+  <text x="100" y="160" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#c4a84a" font-weight="bold">Dr. Polly Graph</text>
+  <text x="100" y="174" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="7" fill="#8a9bae">Statistical Editor</text>
+  <!-- Mini chart -->
+  <polyline points="55,145 62,138 69,142 76,132 83,135 90,128" stroke="#c4a84a" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <circle cx="90" cy="128" r="2" fill="#c4a84a" opacity="0.4"/>
+  <circle cx="55" cy="145" r="2" fill="#8f2333" opacity="0.3"/>
+</svg>

@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" fill="none">
+  <rect width="480" height="280" fill="#f4f7fb"/>
+  <rect x="1" y="1" width="478" height="278" fill="none" stroke="#243b53" stroke-width="2"/>
+  
+  <!-- GitHub-style issue header -->
+  <rect x="30" y="20" width="420" height="24" rx="12" fill="#243b53"/>
+  <circle cx="46" cy="32" r="4" fill="#e8e4dc"/>
+  <text x="58" y="36" font-family="'Segoe UI',sans-serif" font-size="10" fill="#e8e4dc">Issue #42: "Reviewer 2 refuses to explain 'Major Revision'"</text>
+  
+  <!-- Issue body -->
+  <rect x="30" y="54" width="420" height="170" rx="2" fill="white" stroke="#d0d8e0" stroke-width="1"/>
+  
+  <!-- Labels -->
+  <rect x="44" y="68" width="60" height="16" rx="8" fill="#e99695"/>
+  <text x="74" y="80" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="8" fill="white">bug</text>
+  
+  <rect x="110" y="68" width="70" height="16" rx="8" fill="#bfd4e7"/>
+  <text x="145" y="80" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="8" fill="#243b53">peer-review</text>
+  
+  <rect x="186" y="68" width="80" height="16" rx="8" fill="#fbca04"/>
+  <text x="226" y="80" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="8" fill="#243b53">status: stuck</text>
+  
+  <!-- Comment thread -->
+  <line x1="70" y1="100" x2="436" y2="100" stroke="#e8e5dd" stroke-width="0.5"/>
+  
+  <circle cx="52" cy="120" r="10" fill="#5a9abf"/>
+  <text x="52" y="124" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="white">A</text>
+  <text x="70" y="116" font-family="'Segoe UI',sans-serif" font-size="8" fill="#243b53" font-weight="bold">Author</text>
+  <text x="70" y="128" font-family="'Segoe UI',sans-serif" font-size="8" fill="#6a7b8c">opened this issue 3 months ago</text>
+  
+  <rect x="70" y="136" width="360" height="36" rx="4" fill="#f8f9fa" stroke="#e8e5dd" stroke-width="0.5"/>
+  <text x="78" y="150" font-family="'Segoe UI',sans-serif" font-size="9" fill="#4a453c">Submitted manuscript on page layout. Requested "Minor Revision."</text>
+  <text x="78" y="164" font-family="'Segoe UI',sans-serif" font-size="9" fill="#4a453c">Received 47 comments in 2 hours.</text>
+  
+  <!-- Reply -->
+  <circle cx="52" cy="192" r="10" fill="#8f2333"/>
+  <text x="52" y="196" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="white">R</text>
+  <text x="70" y="188" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8f2333" font-weight="bold">Reviewer 2</text>
+  <text x="70" y="200" font-family="'Segoe UI',sans-serif" font-size="8" fill="#6a7b8c">2 hours ago</text>
+  
+  <rect x="70" y="208" width="360" height="28" rx="4" fill="#fef2f2" stroke="#e8d0cf" stroke-width="0.5"/>
+  <text x="78" y="220" font-family="'Segoe UI',sans-serif" font-size="9" fill="#4a453c" font-style="italic">"The font size is a metaphor for academic overconfidence. Revise."</text>
+  
+  <text x="70" y="248" font-family="'Segoe UI',sans-serif" font-size="8" fill="#6a7b8c">13 reactions 👍 🚀 😄</text>
+  
+  <!-- Footer -->
+  <text x="240" y="268" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#243b53">GitHub Issue #42 — Closed, but unresolved</text>
+</svg>

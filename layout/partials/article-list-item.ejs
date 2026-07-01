@@ -1,0 +1,21 @@
+<%
+  const type = shit_article_type(post);
+  const tagSlugs = (post.tags && post.tags.length)
+    ? post.tags.map((tag) => tag.slug || tag.name).join(",")
+    : "";
+  const collectionSlug = post.collection ? post.collection.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") : "";
+%>
+<article
+  class="article-row filterable-article"
+  data-article-type="<%= type.slug %>"
+  data-collection="<%= collectionSlug %>"
+  data-year="<%= date(post.date, 'YYYY') %>"
+  data-issue="<%= post.issue_id || '' %>"
+  data-tags="<%= tagSlugs %>"
+>
+  <div class="meta-line"><%= type.name %> | Published <%= date(post.date, 'DD MMM YYYY') %></div>
+  <h3 class="article-row-title"><a href="<%= url_for(post.path) %>"><%= post.title %></a></h3>
+  <p class="meta-authors"><%= shit_author_names(post) %></p>
+  <p class="article-row-excerpt"><%= post.abstract || strip_html(post.excerpt || post.content || '').substring(0, 180) %></p>
+  <p class="metric-inline"><%= shit_metrics_compact(post) %></p>
+</article>

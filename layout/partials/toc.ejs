@@ -1,0 +1,6 @@
+<% if (toc(page.content || post.content || '', { list_number: false, class: 'toc-list' })) { %>
+  <section class="sidebar-card">
+    <h3><%= shit_ui('table_of_contents') %></h3>
+    <div class="toc-wrap"><%- toc(page.content || post.content || '', { list_number: false, class: 'toc-list' }) %></div>
+  </section>
+<% } %>

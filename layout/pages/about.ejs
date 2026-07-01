@@ -1,0 +1,10 @@
+<section class="section-block prose-block">
+  <p><%= theme.about.intro %></p>
+  <p><%= theme.about.outro %></p>
+  <h2>Mission</h2>
+  <ul class="ordered-list">
+    <% theme.about.mission.forEach((item) => { %>
+      <li><%= item %></li>
+    <% }) %>
+  </ul>
+</section>

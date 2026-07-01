@@ -1,0 +1,13 @@
+<% if (theme.satire_banner.enabled) { %>
+  <section class="satire-banner <%= theme.satire_banner.sticky ? 'is-sticky' : '' %>" data-dismissible="<%= theme.satire_banner.dismissible ? 'true' : 'false' %>">
+    <div class="container-wide satire-banner-inner">
+      <div>
+        <strong><%= shit_value(theme.satire_banner.title) %>:</strong>
+        <span><%= shit_value(theme.satire_banner.text) %></span>
+      </div>
+      <% if (theme.satire_banner.dismissible) { %>
+        <button class="dismiss-banner" type="button" aria-label="Dismiss notice">Dismiss</button>
+      <% } %>
+    </div>
+  </section>
+<% } %>

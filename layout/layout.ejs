@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="<%= shit_locale() %>" data-preset="<%= theme.style.preset %>">
+  <head>
+    <%- partial('partials/head') %>
+  </head>
+  <body
+    class="journal-body"
+    data-locale="<%= shit_locale() %>"
+    data-ui-copy-code="<%= shit_ui('copy_code') %>"
+    data-ui-copied="<%= shit_ui('copied') %>"
+    data-ui-copy-failed="<%= shit_ui('copy_failed') %>"
+    data-ui-search-loading="<%= shit_ui('search_loading') %>"
+    data-ui-search-ready="<%= shit_ui('search_ready', { count: '__COUNT__' }) %>"
+    data-ui-search-results-for="<%= shit_ui('search_results_for', { count: '__COUNT__', suffix: '__SUFFIX__', query: '__QUERY__' }) %>"
+    data-ui-search-empty-title="<%= shit_ui('search_empty_title') %>"
+    data-ui-search-empty-text="<%= shit_ui('search_empty_text') %>"
+    data-ui-search-failed="<%= shit_ui('search_failed') %>"
+    data-ui-mode-light="<%= shit_ui('light_mode') %>"
+    data-ui-mode-dark="<%= shit_ui('dark_mode') %>"
+    data-ui-toggle-theme="<%= shit_ui('toggle_theme') %>"
+  >
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-sm">Skip to content</a>
+    <%- partial('partials/satire-banner') %>
+    <div class="site-search-shell" id="site-search-dialog" data-index-url="<%= url_for('/search-index.json') %>" hidden aria-hidden="true">
+      <div class="site-search-backdrop" data-search-close="true"></div>
+      <section class="site-search-panel" aria-label="Site search">
+        <div class="site-search-head">
+          <div>
+            <div class="eyebrow"><%= shit_ui('search') %></div>
+            <h2 class="section-title"><%= shit_ui('search_title') %></h2>
+          </div>
+          <button class="dismiss-banner search-close" type="button" data-search-close="true" aria-label="<%= shit_ui('close') %>">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            <span class="sr-only"><%= shit_ui('close') %></span>
+          </button>
+        </div>
+        <label class="search-input-wrap" for="site-search-input">
+          <span class="sr-only"><%= shit_ui('search') %></span>
+          <input id="site-search-input" class="search-input" type="search" placeholder="<%= shit_ui('search_placeholder') %>" autocomplete="off" />
+        </label>
+        <p class="metric-inline search-status" id="site-search-status"><%= shit_ui('search_default_status') %></p>
+        <div class="search-results" id="site-search-results"></div>
+      </section>
+    </div>
+    <div class="journal-shell">
+      <%- partial('partials/masthead') %>
+      <%- partial('partials/nav') %>
+      <main id="main-content" class="journal-main">
+        <%- body %>
+      </main>
+      <%- partial('partials/footer') %>
+    </div>
+    <button class="back-to-top" type="button" aria-label="<%= shit_ui('back_to_top') %>">
+      <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+      <span class="sr-only"><%= shit_ui('back_to_top') %></span>
+    </button>
+    <script src="<%= url_for('/js/main.js') %>"></script>
+  </body>
+</html>

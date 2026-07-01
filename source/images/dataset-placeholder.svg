@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" fill="none">
+  <rect width="480" height="280" fill="#fafaf8"/>
+  <rect x="1" y="1" width="478" height="278" fill="none" stroke="#c5c0b4" stroke-width="1"/>
+  <text x="240" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#4a453c">Supplementary Dataset: Citation Matrix</text>
+  <rect x="40" y="44" width="400" height="90" fill="white" stroke="#d0ccc4" stroke-width="1" rx="2"/>
+  <rect x="40" y="44" width="400" height="22" fill="#f4f2ec"/>
+  <text x="56" y="59" font-family="'Segoe UI',sans-serif" font-size="9" font-weight="bold" fill="#4a453c">Publication</text>
+  <text x="200" y="59" font-family="'Segoe UI',sans-serif" font-size="9" font-weight="bold" fill="#4a453c">Citations</text>
+  <text x="300" y="59" font-family="'Segoe UI',sans-serif" font-size="9" font-weight="bold" fill="#4a453c">Impact</text>
+  <text x="380" y="59" font-family="'Segoe UI',sans-serif" font-size="9" font-weight="bold" fill="#4a453c">Year</text>
+  <line x1="40" y1="66" x2="440" y2="66" stroke="#e0dcd4" stroke-width="0.5"/>
+  <text x="56" y="82" font-family="'Segoe UI',sans-serif" font-size="9" fill="#6a655c">Prenatal Excellence...</text>
+  <text x="200" y="82" font-family="'Segoe UI',sans-serif" font-size="9" fill="#6a655c">1,247</text>
+  <text x="300" y="82" font-family="'Segoe UI',sans-serif" font-size="9" fill="#6a655c">High</text>
+  <text x="380" y="82" font-family="'Segoe UI',sans-serif" font-size="9" fill="#6a655c">2024</text>
+  <line x1="40" y1="94" x2="440" y2="94" stroke="#f0ece4" stroke-width="0.5"/>
+  <text x="56" y="108" font-family="'Segoe UI',sans-serif" font-size="9" fill="#6a655c">Coffee &amp; Productivity</text>
+  <text x="200" y="108" font-family="'Segoe UI',sans-serif" font-size="9" fill="#6a655c">892</text>
+  <text x="300" y="108" font-family="'Segoe UI',sans-serif" font-size="9" fill="#6a655c">Med</text>
+  <text x="380" y="108" font-family="'Segoe UI',sans-serif" font-size="9" fill="#6a655c">2025</text>
+  <line x1="40" y1="120" x2="440" y2="120" stroke="#f0ece4" stroke-width="0.5"/>
+  <text x="56" y="134" font-family="'Segoe UI',sans-serif" font-size="9" fill="#6a655c">Administrative Myth...</text>
+  <text x="200" y="134" font-family="'Segoe UI',sans-serif" font-size="9" fill="#6a655c">456</text>
+  <text x="300" y="134" font-family="'Segoe UI',sans-serif" font-size="9" fill="#6a655c">Low</text>
+  <text x="380" y="134" font-family="'Segoe UI',sans-serif" font-size="9" fill="#6a655c">2026</text>
+  <rect x="40" y="144" width="400" height="90" fill="white" stroke="#d0ccc4" stroke-width="1" rx="2"/>
+  <text x="56" y="164" font-family="'Segoe UI',sans-serif" font-size="9" fill="#4a453c" font-weight="bold">Scatter Plot: Citations vs Year</text>
+  <line x1="70" y1="230" x2="420" y2="230" stroke="#d0ccc4" stroke-width="1"/>
+  <line x1="70" y1="170" x2="70" y2="230" stroke="#d0ccc4" stroke-width="1"/>
+  <circle cx="120" cy="200" r="6" fill="#146f7a" opacity="0.6"/>
+  <circle cx="180" cy="185" r="8" fill="#146f7a" opacity="0.6"/>
+  <circle cx="250" cy="178" r="10" fill="#146f7a" opacity="0.6"/>
+  <circle cx="330" cy="182" r="9" fill="#146f7a" opacity="0.6"/>
+  <circle cx="400" cy="190" r="5" fill="#146f7a" opacity="0.6"/>
+  <path d="M120 200 Q260 180, 400 190" stroke="#5a9abf" stroke-width="1.5" stroke-dasharray="4 3" fill="none"/>
+</svg>

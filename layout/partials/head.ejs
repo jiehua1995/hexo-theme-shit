@@ -1,0 +1,31 @@
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>
+  (() => {
+    try {
+      const stored = window.localStorage.getItem("shitColorMode");
+      if (stored) {
+        document.documentElement.setAttribute("data-color-mode", stored);
+        document.documentElement.setAttribute("data-color-mode-choice", stored);
+      } else {
+        const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+        const initial = prefersDark ? "dark" : "light";
+        window.localStorage.setItem("shitColorMode", initial);
+        document.documentElement.setAttribute("data-color-mode", initial);
+        document.documentElement.setAttribute("data-color-mode-choice", initial);
+      }
+    } catch (_) {}
+  })();
+</script>
+<title><%= page.title ? `${page.title} | ${shit_value(theme.journal.short_name)}` : shit_value(theme.journal.full_name) %></title>
+<meta name="description" content="<%= shit_value(page.description || theme.journal.description) %><%= theme.style.include_satire_in_meta ? ' Satirical content notice applies.' : '' %>" />
+<meta property="og:title" content="<%= page.title || shit_value(theme.journal.full_name) %>" />
+<meta property="og:description" content="<%= shit_value(page.description || theme.journal.description) %>" />
+<meta property="og:type" content="<%= is_post() ? 'article' : 'website' %>" />
+<meta property="og:url" content="<%= shit_absolute_url(page.path || '') %>" />
+<meta property="og:image" content="<%= shit_absolute_url(theme.journal.logo) %>" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="<%= shit_absolute_url(page.path || '') %>" />
+<link rel="icon" href="<%= url_for(theme.journal.favicon) %>" />
+<link rel="alternate" type="application/rss+xml" title="<%= shit_value(theme.journal.short_name) %> RSS" href="<%= url_for('/atom.xml') %>" />
+<link rel="stylesheet" href="<%= url_for('/css/main.css') %>" />

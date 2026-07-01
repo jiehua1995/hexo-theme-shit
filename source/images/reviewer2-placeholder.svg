@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" fill="none">
+  <rect width="480" height="280" fill="#fafaf8"/>
+  <rect x="1" y="1" width="478" height="278" fill="none" stroke="#c5c0b4" stroke-width="1"/>
+  <text x="240" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#4a453c">Figure 1: Reviewer 2 Aggression Spikes by Context</text>
+  
+  <!-- Grid -->
+  <line x1="70" y1="50" x2="70" y2="240" stroke="#d0ccc4" stroke-width="1"/>
+  <line x1="70" y1="240" x2="460" y2="240" stroke="#d0ccc4" stroke-width="1"/>
+  
+  <!-- Y axis labels -->
+  <text x="60" y="243" text-anchor="end" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8a857c">Low</text>
+  <text x="60" y="195" text-anchor="end" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8a857c">Moderate</text>
+  <text x="60" y="147" text-anchor="end" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8a857c">High</text>
+  <text x="60" y="99" text-anchor="end" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8a857c">Extreme</text>
+  <text x="60" y="53" text-anchor="end" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8a857c">Maximum</text>
+  
+  <!-- X axis labels -->
+  <rect x="80" y="245" width="70" height="24" rx="3" fill="#5a9abf" opacity="0.5"/>
+  <text x="115" y="261" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="7" fill="white">Grant Deadlines</text>
+  
+  <rect x="160" y="245" width="70" height="24" rx="3" fill="#146f7a" opacity="0.5"/>
+  <text x="195" y="261" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="7" fill="white">Career Milestones</text>
+  
+  <rect x="240" y="245" width="70" height="24" rx="3" fill="#8f2333" opacity="0.5"/>
+  <text x="275" y="261" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="7" fill="white">Optimistic MS</text>
+  
+  <rect x="320" y="245" width="70" height="24" rx="3" fill="#c4a84a" opacity="0.5"/>
+  <text x="355" y="261" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="7" fill="white">"Novel" Papers</text>
+  
+  <rect x="400" y="245" width="50" height="24" rx="3" fill="#2d4a5e" opacity="0.5"/>
+  <text x="425" y="261" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="7" fill="white">Appendix</text>
+  
+  <!-- Bars (height = aggression level) -->
+  <rect x="88" y="80" width="54" height="160" rx="3" fill="#8f2333" opacity="0.7"/>
+  <rect x="168" y="100" width="54" height="140" rx="3" fill="#8f2333" opacity="0.6"/>
+  <rect x="248" y="60" width="54" height="180" rx="3" fill="#8f2333" opacity="0.8"/>
+  <rect x="328" y="70" width="54" height="170" rx="3" fill="#8f2333" opacity="0.75"/>
+  <rect x="408" y="120" width="34" height="120" rx="3" fill="#8f2333" opacity="0.5"/>
+  
+  <!-- Spikes on top -->
+  <polygon points="115,55 108,80 122,80" fill="#8f2333"/>
+  <polygon points="195,72 188,100 202,100" fill="#8f2333"/>
+  <polygon points="275,38 268,60 282,60" fill="#8f2333"/>
+  <polygon points="355,48 348,70 362,70" fill="#8f2333"/>
+  <polygon points="425,100 418,120 432,120" fill="#8f2333"/>
+  
+  <!-- Trigger phrases callout -->
+  <rect x="120" y="34" width="240" height="18" rx="9" fill="#8f2333" opacity="0.2" stroke="#8f2333" stroke-width="0.5"/>
+  <text x="240" y="47" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8f2333" font-style="italic">Triggers: "novel framework" | "surprisingly" | "contrary to expectation"</text>
+  
+  <!-- Trend line -->
+  <path d="M115 75 L195 95 L275 55 L355 65 L425 115" stroke="#c4a84a" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
+</svg>

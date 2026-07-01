@@ -1,0 +1,9 @@
+<% if (post.abstract) { %>
+  <section class="abstract-box">
+    <h2><%= shit_ui('abstract') %></h2>
+    <p><%= post.abstract %></p>
+    <% if (post.keywords?.length) { %>
+      <p class="meta-keywords"><strong><%= shit_ui('keywords') %>:</strong> <%= post.keywords.join(', ') %></p>
+    <% } %>
+  </section>
+<% } %>

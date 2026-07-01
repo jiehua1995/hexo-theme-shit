@@ -1,0 +1,5 @@
+<div class="card-grid">
+  <% shit_collection_list(site.posts.toArray()).forEach((collection) => { %>
+    <%- partial('../partials/collection-card', { collection }) %>
+  <% }) %>
+</div>

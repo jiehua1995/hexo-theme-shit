@@ -1,0 +1,7 @@
+<article class="sidebar-card">
+  <div class="meta-line">Collection</div>
+  <h3><a href="<%= `${shit_page_path('articles')}?collection=${collection.slug}` %>"><%= collection.name %></a></h3>
+  <p><%= collection.description %></p>
+  <p class="metric-inline"><%= `${collection.count} articles` %></p>
+  <a class="text-link" href="<%= `${shit_page_path('articles')}?collection=${collection.slug}` %>">Browse collection</a>
+</article>

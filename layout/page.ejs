@@ -1,0 +1,11 @@
+<%
+  const title = page.page_key ? (shit_page_title(page.page_key, page.title) || page.title || config.title) : (page.title || config.title);
+  const pageKey = page.page_key || page.layout || '';
+  const pageDescription = page.page_key ? (shit_page_description(page.page_key, page.description) || page.description) : page.description;
+%>
+<section class="page-intro">
+  <div class="eyebrow"><%= shit_ui('internal_page') %></div>
+  <h1 class="page-title"><%= title %></h1>
+  <% if (pageDescription) { %><p class="page-summary"><%= pageDescription %></p><% } %>
+</section>
+<%- partial(`pages/${pageKey}`, { page }) %>

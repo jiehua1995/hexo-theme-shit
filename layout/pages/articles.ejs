@@ -1,0 +1,115 @@
+<%
+  const items = (page.posts?.toArray ? page.posts.toArray() : page.posts || []);
+  const typeOptions = [];
+  const collectionOptions = [];
+  const yearOptions = [];
+  const issueOptions = [];
+  const tagOptions = [];
+  const seenTypes = new Set();
+  const seenCollections = new Set();
+  const seenYears = new Set();
+  const seenIssues = new Set();
+  const seenTags = new Set();
+  items.forEach((post) => {
+    const type = shit_article_type(post);
+    if (!seenTypes.has(type.slug)) {
+      typeOptions.push({ value: type.slug, label: type.name });
+      seenTypes.add(type.slug);
+    }
+    if (post.collection) {
+      const value = post.collection.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+      if (!seenCollections.has(value)) {
+        collectionOptions.push({ value, label: post.collection });
+        seenCollections.add(value);
+      }
+    }
+    const year = date(post.date, 'YYYY');
+    if (!seenYears.has(year)) {
+      yearOptions.push(year);
+      seenYears.add(year);
+    }
+    if (post.issue_id && !seenIssues.has(post.issue_id)) {
+      issueOptions.push(post.issue_id);
+      seenIssues.add(post.issue_id);
+    }
+    (post.tags || []).forEach((tag) => {
+      const value = tag.slug || tag.name;
+      if (!seenTags.has(value)) {
+        tagOptions.push({ value, label: tag.name || tag.slug });
+        seenTags.add(value);
+      }
+    });
+  });
+%>
+<form class="filter-panel" id="article-filters">
+  <div class="filter-panel-head">
+    <span>Browse by article type, collection, tag, year, or issue.</span>
+    <span>Generating plausible conclusions...</span>
+  </div>
+  <div class="filter-controls">
+    <label>
+      <span>Type</span>
+      <select name="type">
+        <option value="">All article types</option>
+        <% typeOptions.forEach((option) => { %>
+          <option value="<%= option.value %>"><%= option.label %></option>
+        <% }) %>
+      </select>
+    </label>
+    <label>
+      <span>Collection</span>
+      <select name="collection">
+        <option value="">All collections</option>
+        <% collectionOptions.forEach((option) => { %>
+          <option value="<%= option.value %>"><%= option.label %></option>
+        <% }) %>
+      </select>
+    </label>
+    <label>
+      <span>Tag</span>
+      <select name="tag">
+        <option value="">All tags</option>
+        <% tagOptions.forEach((option) => { %>
+          <option value="<%= option.value %>"><%= option.label %></option>
+        <% }) %>
+      </select>
+    </label>
+    <label>
+      <span>Year</span>
+      <select name="year">
+        <option value="">All years</option>
+        <% yearOptions.forEach((value) => { %>
+          <option value="<%= value %>"><%= value %></option>
+        <% }) %>
+      </select>
+    </label>
+    <label>
+      <span>Issue</span>
+      <select name="issue">
+        <option value="">All issues</option>
+        <% issueOptions.forEach((value) => { %>
+          <option value="<%= value %>"><%= value %></option>
+        <% }) %>
+      </select>
+    </label>
+    <button type="button" class="button-secondary filter-reset">Reset filters</button>
+  </div>
+</form>
+<div class="article-list">
+  <% if (items.length) { %>
+    <% items.forEach((post) => { %>
+      <%- partial('../partials/article-list-item', { post }) %>
+    <% }) %>
+  <% } else { %>
+    <%- partial('../partials/empty-state') %>
+  <% } %>
+</div>
+<div class="filter-empty empty-state-panel is-hidden" id="filter-empty-state">
+  <h2>No results found</h2>
+  <p>Please consider lowering your standards of evidence.</p>
+</div>
+<% if (page.total > 1) { %>
+  <nav class="pagination-row" id="articles-pagination">
+    <%- paginator({ prev_text: 'Previous', next_text: 'Next' }) %>
+  </nav>
+<% } %>
