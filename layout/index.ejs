@@ -1,0 +1,137 @@
+<%
+  const preset = theme.style.preset || 'classic';
+  const featured = shit_featured_post(site.posts.toArray());
+  const currentIssue = shit_current_issue(site.posts.toArray());
+  const latestPosts = site.posts.sort('-date').limit(theme.homepage.latest_count || 5).toArray();
+  const collections = shit_collection_list(site.posts.toArray()).slice(0, 6);
+  const sortedByAbsurdity = site.posts.sort('-date').toArray().sort((a, b) => (shit_metrics(b).absurdity_score || 0) - (shit_metrics(a).absurdity_score || 0));
+  const sortedByPlausibility = site.posts.sort('-date').toArray().sort((a, b) => (shit_metrics(b).plausibility_index || 0) - (shit_metrics(a).plausibility_index || 0));
+  const mostAbsurd = sortedByAbsurdity[0];
+  const mostPlausible = sortedByPlausibility[0];
+%>
+<div class="home-shell home-shell--<%= preset %>">
+  <section class="page-intro home-intro home-intro--<%= preset %>">
+    <div class="eyebrow"><%= shit_ui('journal_home') %></div>
+    <h1 class="page-title"><%= theme.journal.full_name %></h1>
+    <p class="page-summary"><%= theme.journal.description %></p>
+  </section>
+
+  <% if (theme.homepage.show_current_issue && currentIssue) { %>
+    <section class="home-lead home-lead--<%= preset %>">
+      <div class="issue-hero">
+        <div class="eyebrow"><%= shit_ui('current_issue') %></div>
+        <h2><%= `Volume ${currentIssue.volume} | Issue ${currentIssue.issue} | ${currentIssue.date}` %></h2>
+        <p class="issue-special"><%= currentIssue.title %></p>
+        <p><%= currentIssue.description %></p>
+        <div class="button-row">
+          <a class="button-primary" href="<%= shit_page_path('current_issue') %>"><i class="fa-solid fa-book-open" aria-hidden="true"></i><span><%= shit_ui('view_current_issue') %></span></a>
+          <a class="button-secondary" href="<%= shit_page_path('issues') %>"><i class="fa-solid fa-box-archive" aria-hidden="true"></i><span><%= shit_ui('browse_back_issues') %></span></a>
+        </div>
+      </div>
+      <div class="metric-card-grid home-metric-grid home-metric-grid--<%= preset %>">
+        <% theme.journal_metrics.slice(0, 4).forEach((metric) => { %>
+          <article class="metric-card">
+            <div class="metric-label"><%= metric.label %></div>
+            <div class="metric-value"><%= metric.value %></div>
+          </article>
+        <% }) %>
+      </div>
+    </section>
+  <% } %>
+
+  <% if (theme.homepage.show_featured_article && featured) { %>
+    <section class="section-block home-feature home-feature--<%= preset %>">
+      <div class="section-heading-row">
+        <div>
+          <div class="eyebrow"><%= shit_ui('featured_article') %></div>
+          <h2 class="section-title"><%= shit_ui('lead_contribution') %></h2>
+        </div>
+        <a class="text-link" href="<%= url_for(featured.path) %>"><%= shit_ui('read_article') %></a>
+      </div>
+      <article class="featured-article">
+        <div class="featured-copy">
+          <div class="meta-line"><%= shit_article_type(featured).name %> | <%= shit_ui('published') %> <%= date(featured.date, 'DD MMM YYYY') %></div>
+          <h3><a href="<%= url_for(featured.path) %>"><%= featured.title %></a></h3>
+          <p class="meta-authors"><%= shit_author_names(featured) %></p>
+          <p><%= featured.abstract || strip_html(featured.excerpt || '').substring(0, 220) %></p>
+          <p class="metric-inline"><%= shit_metrics_compact(featured) %></p>
+        </div>
+        <a class="figure-card" href="<%= url_for(featured.path) %>">
+          <img src="<%= url_for('/images/article-placeholder.svg') %>" alt="Featured article placeholder" />
+        </a>
+      </article>
+    </section>
+  <% } %>
+
+  <section class="home-content home-content--<%= preset %>">
+    <% if (theme.homepage.show_latest_articles) { %>
+      <section class="section-block">
+        <div class="section-heading-row">
+          <div>
+            <div class="eyebrow"><%= shit_ui('latest_articles') %></div>
+            <h2 class="section-title"><%= shit_ui('recent_publications') %></h2>
+          </div>
+          <a class="text-link" href="<%= shit_page_path('articles') %>"><%= shit_ui('all_articles') %></a>
+        </div>
+        <div class="article-list">
+          <% latestPosts.forEach((post) => { %>
+            <%- partial('partials/article-list-item', { post }) %>
+          <% }) %>
+        </div>
+      </section>
+    <% } %>
+
+    <section class="section-grid">
+      <div class="section-block">
+        <div class="section-heading-row">
+          <div>
+            <div class="eyebrow"><%= shit_ui('questionable_rankings') %></div>
+            <h2 class="section-title"><%= shit_ui('rankings_heading') %></h2>
+          </div>
+        </div>
+        <div class="ranking-grid home-ranking-grid home-ranking-grid--<%= preset %>">
+          <article class="sidebar-card">
+            <h3><%= shit_ui('most_absurd') %></h3>
+            <% if (mostAbsurd) { %>
+              <p><a href="<%= url_for(mostAbsurd.path) %>"><%= mostAbsurd.title %></a></p>
+              <p class="metric-inline"><%= shit_metrics_compact(mostAbsurd) %></p>
+            <% } %>
+          </article>
+          <article class="sidebar-card">
+            <h3><%= shit_ui('most_plausible') %></h3>
+            <% if (mostPlausible) { %>
+              <p><a href="<%= url_for(mostPlausible.path) %>"><%= mostPlausible.title %></a></p>
+              <p class="metric-inline"><%= shit_metrics_compact(mostPlausible) %></p>
+            <% } %>
+          </article>
+          <article class="sidebar-card">
+            <h3><%= shit_ui('recently_questioned') %></h3>
+            <p><a href="<%= shit_page_path('announcements') %>">Several manuscripts are currently under ceremonial concern.</a></p>
+            <p class="metric-inline"><%= shit_ui('review_latest_notices') %></p>
+          </article>
+        </div>
+      </div>
+
+      <% if (theme.homepage.show_submit_box) { %>
+        <%- partial('partials/submit-box') %>
+      <% } %>
+    </section>
+
+    <% if (theme.homepage.show_collections) { %>
+      <section class="section-block">
+        <div class="section-heading-row">
+          <div>
+            <div class="eyebrow"><%= shit_ui('collections') %></div>
+            <h2 class="section-title"><%= shit_ui('collections_heading') %></h2>
+          </div>
+          <a class="text-link" href="<%= shit_page_path('collections') %>"><%= shit_ui('see_all_collections') %></a>
+        </div>
+        <div class="card-grid home-collection-grid home-collection-grid--<%= preset %>">
+          <% collections.forEach((collection) => { %>
+            <%- partial('partials/collection-card', { collection }) %>
+          <% }) %>
+        </div>
+      </section>
+    <% } %>
+  </section>
+</div>

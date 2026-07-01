@@ -1,0 +1,19 @@
+<section class="section-block prose-block">
+  <h2>Manuscript Categories</h2>
+  <% theme.for_authors.manuscript_categories.forEach((item) => { %>
+    <h3><%= item.title %></h3>
+    <p><%= item.description %></p>
+  <% }) %>
+  <h2>General Requirements</h2>
+  <ul class="ordered-list">
+    <% theme.for_authors.general_requirements.forEach((item) => { %>
+      <li><%= item %></li>
+    <% }) %>
+  </ul>
+  <h2>Submission Checklist</h2>
+  <ul class="ordered-list">
+    <% theme.for_authors.checklist.forEach((item) => { %>
+      <li><%= item %></li>
+    <% }) %>
+  </ul>
+</section>

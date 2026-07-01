@@ -1,0 +1,8 @@
+<section class="sidebar-card">
+  <div class="section-heading-row citation-heading-row">
+    <h3><%= shit_ui('how_to_cite') %></h3>
+    <button type="button" class="copy-citation" data-citation="<%= shit_citation(post) %>"><%= shit_ui('copy_citation') %></button>
+  </div>
+  <p class="citation-text"><%= shit_citation(post) %></p>
+  <p class="citation-text"><strong><%= shit_ui('permanent_url') %>:</strong> <a href="<%= shit_absolute_url(post.path) %>"><%= shit_absolute_url(post.path) %></a></p>
+</section>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" fill="none">
+  <rect width="480" height="280" fill="#fafaf8"/>
+  <rect x="1" y="1" width="478" height="278" fill="none" stroke="#c5c0b4" stroke-width="1"/>
+  <text x="240" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#4a453c">Retraction Notice</text>
+  <rect x="60" y="50" width="360" height="180" fill="white" stroke="#b0413e" stroke-width="2" stroke-dasharray="8 4"/>
+  <text x="240" y="90" text-anchor="middle" font-family="Georgia,serif" font-size="18" fill="#8b251f" font-weight="bold">RETRACTED</text>
+  <line x1="140" y1="105" x2="340" y2="105" stroke="#b0413e" stroke-width="1"/>
+  <text x="240" y="128" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="10" fill="#6a5f50">This article has been retracted at the request of the editorial board.</text>
+  <text x="240" y="148" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="10" fill="#6a5f50">Reason: The methodology was found to be entirely fictional.</text>
+  <text x="240" y="172" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="#8b251f" font-style="italic">"The confidence exceeded the evidence by 3400%."</text>
+  <text x="240" y="200" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="9" fill="#8a857c">DOI: 10.shit/2026.01.15.confused</text>
+  <text x="240" y="218" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="8" fill="#a89b8c">Retraction Date: January 15, 2026</text>
+</svg>

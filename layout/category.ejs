@@ -1,0 +1,9 @@
+<section class="page-intro">
+  <div class="eyebrow">Category Archive</div>
+  <h1 class="page-title"><%= page.category %></h1>
+</section>
+<div class="article-list">
+  <% page.posts.toArray().forEach((post) => { %>
+    <%- partial('partials/article-list-item', { post }) %>
+  <% }) %>
+</div>

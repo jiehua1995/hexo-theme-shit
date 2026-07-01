@@ -1,0 +1,9 @@
+<section class="sidebar-card">
+  <h3><%= title || shit_ui('article_metrics') %></h3>
+  <dl class="definition-list">
+    <% shit_metric_entries(post).slice(0, theme.metrics?.sidebar_limit || 5).forEach((entry) => { %>
+      <dt><%= entry.label %></dt>
+      <dd><%= entry.value %></dd>
+    <% }) %>
+  </dl>
+</section>

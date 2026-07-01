@@ -1,0 +1,41 @@
+<%
+  const preset = theme.style.preset || 'classic';
+  const issue = shit_current_issue(site.posts.toArray());
+  const groups = {};
+  (issue?.posts || []).forEach((post) => {
+    const name = shit_article_type(post).name;
+    if (!groups[name]) groups[name] = [];
+    groups[name].push(post);
+  });
+%>
+<% if (!issue) { %>
+  <%- partial('../partials/empty-state') %>
+<% } else { %>
+  <section class="issue-directory issue-directory--<%= preset %>">
+    <div class="issue-directory-copy">
+      <div class="eyebrow"><%= shit_ui('current_issue') %></div>
+      <h2><%= `Volume ${issue.volume} | Issue ${issue.issue} | ${issue.date}` %></h2>
+      <p class="issue-special">Special Issue: <%= issue.title %></p>
+      <p><%= issue.description %></p>
+      <p class="metric-inline"><%= `${issue.posts.length} article${issue.posts.length > 1 ? 's' : ''} | ${issue.fake_impact_note}` %></p>
+    </div>
+    <aside class="issue-directory-cover">
+      <img class="issue-cover issue-cover-compact" src="<%= issue.cover %>" alt="Issue cover placeholder" />
+    </aside>
+  </section>
+  <section class="issue-toc issue-toc--<%= preset %>">
+    <% Object.keys(groups).forEach((key, index) => { %>
+      <section class="issue-toc-section issue-toc-section--<%= preset %>">
+        <div class="issue-toc-heading">
+          <h2 class="section-title"><%= key %></h2>
+          <span class="metric-inline"><%= `${String(index + 1).padStart(2, '0')} | ${groups[key].length} article${groups[key].length > 1 ? 's' : ''}` %></span>
+        </div>
+        <div class="article-list">
+          <% groups[key].forEach((post) => { %>
+            <%- partial('../partials/article-list-item', { post }) %>
+          <% }) %>
+        </div>
+      </section>
+    <% }) %>
+  </section>
+<% } %>

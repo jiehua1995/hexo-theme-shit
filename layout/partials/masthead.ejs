@@ -1,0 +1,16 @@
+<header class="masthead">
+  <div class="container-wide masthead-inner">
+    <a class="brand-lockup" href="<%= url_for('/') %>">
+      <img class="brand-seal" src="<%= url_for(theme.journal.seal) %>" alt="<%= shit_value(theme.journal.short_name) %> seal" />
+      <div>
+        <div class="brand-short"><%= shit_value(theme.journal.short_name) %></div>
+        <div class="brand-full"><%= shit_value(theme.journal.full_name) %></div>
+      </div>
+    </a>
+    <div class="masthead-meta">
+      <div><%= shit_value(theme.journal.tagline) %></div>
+      <div>ISSN <%= theme.journal.issn %> | eISSN <%= theme.journal.eissn %></div>
+      <div><%= shit_value(theme.journal.publisher) %> | <%= shit_value(theme.journal.location) %></div>
+    </div>
+  </div>
+</header>

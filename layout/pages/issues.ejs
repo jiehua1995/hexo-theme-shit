@@ -1,0 +1,5 @@
+<div class="card-stack">
+  <% shit_issue_list(site.posts.toArray()).forEach((issue) => { %>
+    <%- partial('../partials/issue-card', { issue }) %>
+  <% }) %>
+</div>

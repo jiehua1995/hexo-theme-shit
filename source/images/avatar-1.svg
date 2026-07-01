@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <circle cx="100" cy="100" r="98" fill="#1a2332"/>
+  <circle cx="100" cy="75" r="32" fill="#2d4a5e" stroke="#5a9abf" stroke-width="2"/>
+  <path d="M38 175c15-38 44-58 62-58s47 20 62 58" fill="#2d4a5e" stroke="#5a9abf" stroke-width="2"/>
+  <circle cx="88" cy="70" r="3" fill="#5a9abf"/>
+  <circle cx="112" cy="70" r="3" fill="#5a9abf"/>
+  <path d="M92 82 Q100 88, 108 82" stroke="#5a9abf" stroke-width="1.5" fill="none"/>
+  <rect x="76" y="60" width="48" height="6" rx="3" fill="#5a9abf" opacity="0.4"/>
+  <text x="100" y="160" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#5a9abf" font-weight="bold">Dr. A. N. Author</text>
+  <text x="100" y="174" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="7" fill="#8a9bae">Editor-in-Chief</text>
+  <circle cx="60" cy="50" r="4" fill="#c4a84a" opacity="0.3"/>
+  <circle cx="145" cy="55" r="3" fill="#c4a84a" opacity="0.25"/>
+  <circle cx="135" cy="110" r="5" fill="#c4a84a" opacity="0.2"/>
+</svg>

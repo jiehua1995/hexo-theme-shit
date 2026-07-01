@@ -1,0 +1,26 @@
+<%
+  const type = shit_article_type(post);
+  const issue = shit_issue_for_post(post);
+  const articleNumber = shit_article_number(post);
+  const identifier = shit_identifier(post);
+  const doiLike = shit_doi_like(post);
+%>
+<header class="article-header">
+  <%- partial('partials/article-notices', { post }) %>
+  <div class="meta-line"><%= `${type.name} | ${shit_ui('article')} ${articleNumber}` %></div>
+  <h1 class="article-title"><%= post.title %></h1>
+  <% if (post.subtitle) { %><p class="article-subtitle"><%= post.subtitle %></p><% } %>
+  <%- partial('partials/author-list', { post }) %>
+  <%- partial('partials/affiliation-list', { post }) %>
+  <div class="article-meta-grid">
+    <div><strong><%= shit_ui('article_no') %></strong><span><%= articleNumber %></span></div>
+    <div><strong><%= shit_ui('published') %></strong><span><%= date(post.date, 'DD MMM YYYY') %></span></div>
+    <% if (post.updated) { %><div><strong><%= shit_ui('updated') %></strong><span><%= date(post.updated, 'DD MMM YYYY') %></span></div><% } %>
+    <% if (issue) { %><div><strong><%= shit_ui('issue') %></strong><span><%= `Volume ${issue.volume} | Issue ${issue.issue} | ${issue.id}` %></span></div><% } %>
+    <% if (post.pages) { %><div><strong><%= shit_ui('pages') %></strong><span><%= post.pages %></span></div><% } %>
+    <div><strong><%= shit_ui('shit_id') %></strong><span><%= identifier %></span></div>
+    <div><strong><%= shit_ui('doi_like') %></strong><span><%= doiLike %> (not a DOI)</span></div>
+    <div><strong><%= shit_ui('permanent_url') %></strong><span><a href="<%= shit_absolute_url(post.path) %>"><%= shit_absolute_url(post.path) %></a></span></div>
+  </div>
+  <%- partial('partials/abstract-box', { post }) %>
+</header>

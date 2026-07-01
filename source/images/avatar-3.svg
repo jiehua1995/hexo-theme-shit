@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <circle cx="100" cy="100" r="98" fill="#3b2a2a"/>
+  <circle cx="100" cy="75" r="32" fill="#5c3a3a" stroke="#8f2333" stroke-width="2"/>
+  <path d="M38 175c15-38 44-58 62-58s47 20 62 58" fill="#5c3a3a" stroke="#8f2333" stroke-width="2"/>
+  <!-- X eyes for the mysterious Reviewer 2 -->
+  <line x1="88" y1="65" x2="96" y2="73" stroke="#8f2333" stroke-width="2.5"/>
+  <line x1="96" y1="65" x2="88" y2="73" stroke="#8f2333" stroke-width="2.5"/>
+  <line x1="104" y1="65" x2="112" y2="73" stroke="#8f2333" stroke-width="2.5"/>
+  <line x1="112" y1="65" x2="104" y2="73" stroke="#8f2333" stroke-width="2.5"/>
+  <!-- Question marks floating around -->
+  <text x="50" y="55" font-family="Georgia,serif" font-size="16" fill="#8f2333" opacity="0.4">?</text>
+  <text x="140" y="50" font-family="Georgia,serif" font-size="14" fill="#8f2333" opacity="0.3">?</text>
+  <text x="145" y="95" font-family="Georgia,serif" font-size="12" fill="#8f2333" opacity="0.25">?</text>
+  <text x="60" y="115" font-family="Georgia,serif" font-size="10" fill="#8f2333" opacity="0.2">?</text>
+  <text x="100" y="160" text-anchor="middle" font-family="Georgia,serif" font-size="9" fill="#8f2333" font-weight="bold">Reviewer 2</text>
+  <text x="100" y="174" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="7" fill="#c4a84a">Unavailable but Essential</text>
+  <circle cx="65" cy="80" r="3" fill="#c4a84a" opacity="0.2"/>
+  <circle cx="138" cy="120" r="4" fill="#c4a84a" opacity="0.15"/>
+</svg>

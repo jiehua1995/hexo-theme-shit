@@ -1,0 +1,963 @@
+# ============================================================
+# SHIT Journal Theme Configuration
+# SHIT 学术期刊主题配置文件
+# ============================================================
+#
+# This file contains all configuration options for the hexo-theme-shit theme.
+# 本文件包含 hexo-theme-shit 主题的所有配置选项。
+#
+# Theme purpose: A satirical, humorous Hexo theme that makes your blog look
+#                like a legitimate academic journal — even though everything
+#                is AI-generated nonsense. You can also use it for a real blog.
+# 主题用途：一个讽刺搞笑的 Hexo 主题，让你的博客看起来像正经学术期刊——
+#          尽管所有内容都是 AI 瞎编的。你也可以拿它当真实博客用。
+#
+# Every article on this theme is fictional, AI-generated, and for entertainment only.
+# 本主题的所有文章都是虚构的、AI 生成的，仅供娱乐。
+#
+# ============================================================
+
+# ----------------------------------------------------------
+# Journal Identity / 期刊身份
+# Set the name, description, and branding of your journal.
+# 设置你期刊的名称、描述和品牌标识。
+# ----------------------------------------------------------
+journal:
+  # Short display name / 简称，显示在导航栏等位置
+  short_name: SHIT
+
+  # Full official name / 全称，显示在页眉等正式位置
+  full_name: Society for Hyperbolic and Imaginary Theories
+
+  # One-line tagline / 标语，显示在 Logo 下方
+  # A clever one-liner that describes the journal's purpose
+  # 一句描述期刊宗旨的俏皮话
+  tagline: Official-looking scholarship for fictional findings.
+
+  # Fun slogan / 趣味口号，显示在页脚等位置
+  slogan: Wrong, but beautifully formatted.
+
+  # Longer description for meta tags and about pages / 详细描述，用于元标签和关于页面
+  description: A professional-looking Hexo journal theme for fictional scholarship, AI-generated hallucinations, academic satire, useful absurdities, and official-looking nonsense.
+
+  # ISSN for the print version / 印刷版 ISSN 号（虚构的）
+  issn: 2049-0001
+
+  # ISSN for the electronic version / 电子版 ISSN 号（虚构的）
+  eissn: 2049-0002
+
+  # Fake impact factor / 假的影响因子，可以是任何搞笑内容
+  impact_factor: Under active hallucination
+
+  # Year the journal was "established" / 期刊"成立"年份
+  established: 2026
+
+  # Publisher name / 出版者名称
+  publisher: Society for Hyperbolic and Imaginary Theories
+
+  # Publisher location / 出版者地址
+  location: Berlin / Internet / Reviewer 2's imagination
+
+  # Logo path (SVG recommended) / Logo 路径（推荐 SVG 格式）
+  # Place your logo in themes/hexo-theme-shit/source/images/
+  # 将你的 Logo 放在 themes/hexo-theme-shit/source/images/ 目录中
+  logo: /images/shit-seal.svg
+
+  # Decorative seal image / 装饰性印章图片
+  seal: /images/shit-seal.svg
+
+  # Favicon / 网站图标
+  favicon: /images/shit-seal.svg
+
+# ----------------------------------------------------------
+# Style & Appearance / 样式与外观
+# Customize colors, layout, typography, and dark mode.
+# 自定义颜色、布局、排版和暗色模式。
+# ----------------------------------------------------------
+style:
+  # Visual preset / 视觉风格预设
+  # Options: institutional (学术正式) | academic (学院派) | modern (现代简约)
+  # 可选值：institutional / academic / modern
+  preset: institutional
+
+  # Color mode / 颜色模式
+  # system: follows OS setting (亮/暗) | light: always light mode
+  # dark: always dark mode
+  # 可选值：system（跟随系统）| light（始终浅色）| dark（始终深色）
+  color_mode: system
+
+  # Color scheme / 色彩方案
+  # paper: warm paper-like tones | clean: crisp white | vintage: aged look
+  # 可选值：paper（暖色纸张感）| clean（干净白色）| vintage（复古做旧）
+  color_scheme: paper
+
+  # Typography style / 字体排印风格
+  # editorial: serif-heavy, magazine-like | clean: sans-serif, modern
+  # 可选值：editorial（衬线体，杂志风）| clean（无衬线体，现代风）
+  typography: editorial
+
+  # Content density / 内容密度
+  # balanced: default | compact: more content per page | airy: lots of whitespace
+  # 可选值：balanced（均衡）| compact（紧凑）| airy（宽松）
+  density: balanced
+
+  # Border style / 边框风格
+  # fine: thin subtle lines | none: no borders | classic: thicker traditional
+  # 可选值：fine（细线）| none（无边框）| classic（经典粗线）
+  border_style: fine
+
+  # Max layout width / 最大布局宽度
+  # Use px, rem, or vw (e.g., 1280px | 80rem | 90vw)
+  # 可使用 px、rem 或 vw 单位
+  layout_width: 1280px
+
+  # Show article sidebar with TOC and metrics / 是否显示文章侧边栏（目录和指标）
+  # Set to false to disable the sidebar on article pages
+  # 设为 false 可在文章页面禁用侧边栏
+  article_sidebar: true
+
+  # Enable dark mode toggle / 是否启用暗色模式切换按钮
+  dark_mode: true
+
+  # Show decorative academic icons (flourishes, rules, etc.) / 是否显示装饰性学术图标
+  show_decorative_icons: true
+
+  # Include satire metadata in HTML meta tags / 是否在 HTML meta 中包含讽刺元信息
+  include_satire_in_meta: true
+
+# ----------------------------------------------------------
+# Internationalization / 国际化
+# Set the default language for the theme.
+# 设置主题默认语言。
+# ----------------------------------------------------------
+i18n:
+  # Available locales / 可用语言
+  # en: English | zh: 简体中文
+  # 支持 en（英文）和 zh（简体中文）
+  locale: en
+
+# ----------------------------------------------------------
+# Satire Banner / 讽刺内容标语
+# Control the disclaimer banner at the top of every page.
+# 控制每页顶部显示的免责声明标语。
+#
+# NOTE: If you use this theme for real/serious content,
+#       set enabled: false to hide this banner.
+# 注意：如果你用此主题发布真实/严肃内容，
+#       请将 enabled 设为 false 隐藏此标语。
+# ----------------------------------------------------------
+satire_banner:
+  # Enable or disable the satire banner / 启用或禁用讽刺标语
+  enabled: true
+
+  # Banner title / 标语标题
+  title: Satirical Content Notice
+
+  # Banner text (English) / 标语正文（英文）
+  text: SHIT publishes fictional, humorous, and intentionally absurd content. Nothing on this site should be interpreted as scientific, medical, legal, financial, academic, immigration, career, or professional advice.
+
+  # Banner text (Chinese) / 标语正文（中文）
+  text_zh: 本站内容为虚构、幽默、荒诞创作，不构成科学、医学、法律、金融、移民、职业、学术或任何专业建议。
+
+  # Compact mode: shorter, less intrusive / 紧凑模式：更简短、更不显眼
+  compact: false
+
+  # Stick the banner to the top of the viewport / 是否将标语固定在页面顶部
+  sticky: true
+
+  # Allow users to dismiss the banner / 是否允许用户关闭标语
+  dismissible: true
+
+# ----------------------------------------------------------
+# Navigation Menu / 导航菜单
+# Configure the top navigation bar items.
+# 配置顶部导航栏的菜单项。
+#
+# Each item has: label（显示文字）, translation_key（i18n 键）, path（链接路径）
+# ----------------------------------------------------------
+navigation:
+  - label: Home
+    translation_key: home
+    path: /
+  - label: Articles
+    translation_key: articles
+    path: /articles/
+  - label: Current Issue
+    translation_key: current_issue
+    path: /current-issue/
+  - label: Collections
+    translation_key: collections
+    path: /collections/
+  - label: Policies
+    translation_key: policies
+    path: /policies/
+  - label: Editorial Board
+    translation_key: editorial_board
+    path: /editorial-board/
+  - label: Submit
+    translation_key: submit
+    path: /submit/
+
+# ----------------------------------------------------------
+# Homepage Layout / 首页布局
+# Choose which sections to display on the homepage.
+# 选择首页显示哪些版块。
+# ----------------------------------------------------------
+homepage:
+  # Show current issue card / 显示当期杂志卡片
+  show_current_issue: true
+
+  # Show featured/highlighted article / 显示推荐文章
+  show_featured_article: true
+
+  # Show latest articles list / 显示最新文章列表
+  show_latest_articles: true
+
+  # Show collections carousel / 显示主题合集
+  show_collections: true
+
+  # Show journal metrics panel / 显示期刊指标面板
+  show_metrics: true
+
+  # Show submit box / 显示投稿按钮
+  show_submit_box: true
+
+  # Number of latest articles to show / 显示最新文章的數量
+  latest_count: 5
+
+  # Slug of the featured article (must match article URL slug) / 推荐文章的 slug
+  # This must match the filename slug in source/_posts/
+  # 必须与 source/_posts/ 中的文章文件 slug 匹配
+  featured_article_slug: prenatal-first-author-publications-predict-future-academy-membership
+
+  # Current issue ID (matches issues[].id) / 当期杂志 ID
+  current_issue_id: 202606
+
+# ----------------------------------------------------------
+# Pages / 页面
+# Enable/disable built-in pages and customize their titles.
+# 启用/禁用内置页面并自定义标题。
+#
+# To disable a page, set enabled: false.
+# 要禁用某个页面，将 enabled 设为 false。
+# ----------------------------------------------------------
+pages:
+  # Articles archive page / 文章归档页
+  articles:
+    enabled: true
+    title: Articles
+    path: articles
+    description: Complete archive of the journal's most confident mistakes.
+
+  # Current issue page / 当期杂志页
+  current_issue:
+    enabled: true
+    title: Current Issue
+    path: current-issue
+    description: The currently circulating issue of SHIT.
+
+  # All issues archive / 所有期刊归档
+  issues:
+    enabled: true
+    title: Issues
+    path: issues
+    description: Back issues and suspiciously polished records.
+
+  # Collections page / 主题合集页
+  collections:
+    enabled: true
+    title: Collections
+    path: collections
+    description: Themed groupings of useful absurdities and structured nonsense.
+
+  # Submit page / 投稿页
+  submit:
+    enabled: true
+    title: Submit to SHIT
+    path: submit
+    description: Submit fictional or satirical manuscripts through GitHub Issues.
+
+  # For Authors page / 作者指南页
+  for_authors:
+    enabled: true
+    title: For Authors
+    path: for-authors
+    description: Author guidance for manuscripts of unreasonable confidence.
+
+  # Policies page / 政策页
+  policies:
+    enabled: true
+    title: Ethics & Policies
+    path: policies
+    description: Formal policies concerning fictional scholarship and accidental truth.
+
+  # Editorial Board page / 编委介绍页
+  editorial_board:
+    enabled: true
+    title: Editorial Board
+    path: editorial-board
+    description: The distinguished committee responsible for editorial hallucination.
+
+  # About page / 关于页
+  about:
+    enabled: true
+    title: About
+    path: about
+    description: About the Society for Hyperbolic and Imaginary Theories.
+
+  # Indexing page / 收录页
+  indexing:
+    enabled: true
+    title: Indexing
+    path: indexing
+    description: Where SHIT claims to be indexed.
+
+  # Metrics page / 指标页
+  metrics:
+    enabled: true
+    title: Journal Metrics
+    path: metrics
+    description: Impact, absurdity, and formatting indicators.
+
+  # Announcements page / 公告页
+  announcements:
+    enabled: true
+    title: Announcements
+    path: announcements
+    description: Calls for papers, corrections, and official notices.
+
+  # Special Issues page / 特刊页
+  special_issues:
+    enabled: true
+    title: Special Issues
+    path: special-issues
+    description: Themed calls for papers and concentrated absurdity.
+
+  # FAQ page / 常见问题页
+  faq:
+    enabled: true
+    title: FAQ
+    path: faq
+    description: Frequently questioned answers.
+
+# ----------------------------------------------------------
+# Journal Issues / 期刊期号
+# Define the journal's issues (volumes, dates, covers, etc.).
+# 定义期刊的期号（卷、日期、封面等）。
+#
+# Each issue has: id, volume, issue number, date, title, cover image, etc.
+# ----------------------------------------------------------
+issues:
+  # Example: Issue 2 (add more issues by copying this structure)
+  # 示例：第 2 期（复制此结构可添加更多期号）
+  - id: 202607
+    volume: 1              # 卷号 / Volume number
+    issue: 2               # 期号 / Issue number
+    date: July 2026        # 出版日期 / Publication date
+    title: The Thermodynamics of Confidence and the Acoustics of Open-Plan Offices
+    description: A summer issue on caffeine, authorship economics, institutional geography, and the acoustic ecology of shared desks.
+    cover: /images/issue-cover-3.svg    # 封面图片路径
+    fake_impact_note: Under active peer review by the concept of relevance.
+    featured_slug: on-the-thermodynamics-of-confidence-why-more-authors-generate-less-evidence
+
+  - id: 202606
+    volume: 1
+    issue: 1
+    date: June 2026
+    title: Prenatal Excellence and Citation-Dependent Human Development
+    description: An inaugural issue on overachievement before birth, reviewer ecology, and the thermodynamics of confidence.
+    cover: /images/issue-cover-1.svg
+    fake_impact_note: Immediate influence pending verification.
+    featured_slug: prenatal-first-author-publications-predict-future-academy-membership
+
+  - id: 202605
+    volume: 1
+    issue: 0
+    date: May 2026
+    title: Foundational Nonsense and Administrative Overconfidence
+    description: Pilot issue for papers that looked peer reviewed from across the room.
+    cover: /images/issue-cover-2.svg
+    fake_impact_note: Archived for ceremonial reasons.
+    featured_slug: a-negative-result-on-the-existence-of-work-life-balance
+
+# ----------------------------------------------------------
+# Collections / 主题合集
+# Group articles into themed collections.
+# 将文章分组为主题合集。
+#
+# These are displayed on the Collections page.
+# 在合集页面中显示。
+# ----------------------------------------------------------
+collections:
+  - name: Academic Promotion Studies
+    slug: academic-promotion-studies
+    description: Research into career acceleration unsupported by common sense.
+
+  - name: Reviewer 2 Biology
+    slug: reviewer-2-biology
+    description: Natural history, behavior, and migratory hostility of Reviewer 2.
+
+  - name: Grant Proposal Fiction
+    slug: grant-proposal-fiction
+    description: Administrative prose with elaborate confidence and partial budgets.
+
+  - name: AI Hallucination Reports
+    slug: ai-hallucination-reports
+    description: Well-formatted computational overreach.
+
+  - name: Preprint Metaphysics
+    slug: preprint-metaphysics
+    description: Ideas too unstable for journals and too structured for tweets.
+
+  - name: Coffee and Productivity
+    slug: coffee-and-productivity
+    description: Caffeine-centric studies with implausibly obedient p-values.
+
+  - name: Administrative Genetics
+    slug: administrative-genetics
+    description: Heritability of bureaucracy, forms, and institutional suffering.
+
+  - name: Imaginary Metrics
+    slug: imaginary-metrics
+    description: Numerical systems for assessing confidence without evidence.
+
+  - name: Unnecessary Methods
+    slug: unnecessary-methods
+    description: Techniques solving questions nobody approved.
+
+  - name: Useful Absurdities
+    slug: useful-absurdities
+    description: Pieces that are absurd first and useful second.
+
+# ----------------------------------------------------------
+# Article Types / 文章类型
+# Define article type categories with colors and icons.
+# 定义文章类型分类，包括颜色图标。
+#
+# Each article type has: name, slug, color (hex), icon (2-3 letters), description.
+# 每篇文章类型包含：名称、slug、颜色（十六进制）、图标（2-3个字母）、描述。
+#
+# In your article's front-matter, use the slug to assign a type:
+# 在文章 front-matter 中，使用 slug 来分配类型：
+#   article_type: retraction-ready-report
+# ----------------------------------------------------------
+article_types:
+  - name: Retraction-Ready Report
+    slug: retraction-ready-report
+    color: "#7a2831"        # Badge color / 标签颜色
+    icon: RR                 # Badge icon text / 标签图标文字
+    description: Studies whose conclusions are mature enough for immediate concern.
+    # Default notices shown on articles of this type / 此类型文章的默认警示标签
+    default_notices: [SATIRE, FICTIONAL STUDY, NOT PROFESSIONAL ADVICE]
+
+  - name: Imaginary Dataset
+    slug: imaginary-dataset
+    color: "#2d5b74"
+    icon: ID
+    description: Datasets that would have been useful if they existed.
+
+  - name: Unnecessary Methods
+    slug: unnecessary-methods
+    color: "#42644d"
+    icon: UM
+    description: Methods solving problems nobody was willing to define.
+
+  - name: Computational Daydream
+    slug: computational-daydream
+    color: "#6d5a3f"
+    icon: CD
+    description: Simulations performed primarily in the author's imagination.
+
+  - name: Peer Review Theater
+    slug: peer-review-theater
+    color: "#6b3d4e"
+    icon: PT
+    description: Dramatized academic suffering involving Reviewer 2.
+
+  - name: Grant Proposal Fiction
+    slug: grant-proposal-fiction
+    color: "#415a8a"
+    icon: GF
+    description: Administrative documents with excessive confidence and insufficient budget.
+
+  - name: Citation Needed
+    slug: citation-needed
+    color: "#5d4f7c"
+    icon: CN
+    description: Claims urgently requiring references, preferably after publication.
+
+  - name: Negative Evidence
+    slug: negative-evidence
+    color: "#4c4c4c"
+    icon: NE
+    description: Beautifully formatted absences of support.
+
+  - name: Synthetic Review
+    slug: synthetic-review
+    color: "#25576a"
+    icon: SR
+    description: AI-generated reviews with uncertain ontology and excellent typography.
+
+  - name: Official-Looking Literature
+    slug: official-looking-literature
+    color: "#4f5f66"
+    icon: OL
+    description: Texts resembling documents with suspicious authority.
+
+  - name: Hallucinated Observation
+    slug: hallucinated-observation
+    color: "#8a5a2f"
+    icon: HO
+    description: Findings observed through confidence-enhanced instrumentation.
+
+  - name: Letters to the Irrelevant Editor
+    slug: letters-to-the-irrelevant-editor
+    color: "#5b5b7a"
+    icon: LE
+    description: Correspondence of limited necessity and great formality.
+
+  - name: Administrative Mythology
+    slug: administrative-mythology
+    color: "#6d523f"
+    icon: AM
+    description: Legends concerning workflow, approval, and impossible compliance.
+
+  - name: Coffee-Driven Discovery
+    slug: coffee-driven-discovery
+    color: "#7a4a2c"
+    icon: CO
+    description: Discoveries powered by caffeine and deadline panic.
+
+  - name: Reviewer 2 Correspondence
+    slug: reviewer-2-correspondence
+    color: "#5d3342"
+    icon: R2
+    description: Dialogues with absent but dominant critical voices.
+
+  - name: Supplementary Absurdity
+    slug: supplementary-absurdity
+    color: "#4a6150"
+    icon: SA
+    description: Additional material of ceremonial importance.
+
+  - name: Plausible Nonsense
+    slug: plausible-nonsense
+    color: "#51636f"
+    icon: PN
+    description: Surprisingly elegant claims with insufficient grounding.
+
+  - name: Accidental Insight
+    slug: accidental-insight
+    color: "#406775"
+    icon: AI
+    description: Findings that became useful before anyone intended them to.
+
+  - name: Useful Absurdity
+    slug: useful-absurdity
+    color: "#466955"
+    icon: UA
+    description: Deliberately strange work with practical aftereffects.
+
+  - name: Marginal Finding
+    slug: marginal-finding
+    color: "#6d5b4a"
+    icon: MF
+    description: Findings whose support is slight but theatrically presented.
+
+# ----------------------------------------------------------
+# Fake Metrics / 搞笑指标
+# Define fake academic metrics displayed on articles.
+# 定义文章上显示的搞笑学术指标。
+#
+# These are intentionally humorous — customize the labels and defaults.
+# 这些 intentionally 搞笑——可以自定义标签和默认值。
+# ----------------------------------------------------------
+metrics:
+  # Show metrics in article list / 在文章列表中显示指标
+  show_in_list: true
+
+  # Number of metrics shown in sidebar / 侧边栏显示的指标数量
+  sidebar_limit: 5
+
+  # Metric display order / 指标显示顺序
+  order:
+    - absurdity_score
+    - plausibility_index
+    - reviewer2_risk
+    - evidence_status
+    - reproducibility
+    - citation_potential
+    - grantability
+    - confidence
+    - p_value
+    - sample_size
+    - truth_proximity
+    - hallucination_level
+    - formatting_quality
+    - administrative_relevance
+
+  # Human-readable labels / 可读标签
+  labels:
+    absurdity_score: Absurdity Score
+    plausibility_index: Plausibility Index
+    reviewer2_risk: Reviewer 2 Risk
+    evidence_status: Evidence Status
+    reproducibility: Reproducibility
+    citation_potential: Citation Potential
+    grantability: Grantability
+    confidence: Confidence
+    p_value: P-value
+    sample_size: Sample Size
+    truth_proximity: Truth Proximity
+    hallucination_level: Hallucination Level
+    formatting_quality: Formatting Quality
+    administrative_relevance: Administrative Relevance
+
+  # Default values for articles that don't specify metrics / 未指定指标的文章默认值
+  defaults:
+    absurdity_score: 91
+    plausibility_index: 76
+    reviewer2_risk: Elevated
+    evidence_status: Incomplete
+    reproducibility: Pending
+    citation_potential: Inflated
+    grantability: Moderate
+    confidence: Disproportionate
+    p_value: "p < 0.05, probably"
+    sample_size: Symbolic
+    truth_proximity: Unclear
+    hallucination_level: Measured
+    formatting_quality: Excellent
+    administrative_relevance: Emerging
+
+# ----------------------------------------------------------
+# Default Notices / 默认警示标签
+# Notices shown on every article by default.
+# 每篇文章默认显示的警示标签。
+#
+# Common values: SATIRE | FICTIONAL STUDY | AI-GENERATED | NOT PROFESSIONAL ADVICE
+# 常用值：SATIRE（讽刺）| FICTIONAL STUDY（虚构研究）| AI-GENERATED（AI 生成）| NOT PROFESSIONAL ADVICE（非专业建议）
+# ----------------------------------------------------------
+notices:
+  defaults:
+    - SATIRE
+    - FICTIONAL STUDY
+    - AI-GENERATED
+    - NOT PROFESSIONAL ADVICE
+    - DOI-LIKE IDENTIFIER ONLY
+
+# ----------------------------------------------------------
+# GitHub Integration / GitHub 集成
+# Connect your GitHub repo for submission, editing, and discussions.
+# 连接你的 GitHub 仓库以支持投稿、编辑和讨论。
+#
+# Replace "example/hexo-theme-shit" with your actual GitHub repo.
+# 将 "example/hexo-theme-shit" 替换为你实际的 GitHub 仓库。
+# ----------------------------------------------------------
+github:
+  # Main repository URL / 主仓库地址
+  repo_url: https://github.com/example/hexo-theme-shit
+
+  # Issues page URL (for submissions) / Issues 页面地址（用于投稿）
+  issues_url: https://github.com/example/hexo-theme-shit/issues
+
+  # New issue submission URL / 新建 Issue 的投稿链接
+  submit_issue_url: https://github.com/example/hexo-theme-shit/issues/new/choose
+
+  # Discussions page URL / 讨论页地址
+  discussions_url: https://github.com/example/hexo-theme-shit/discussions
+
+  # Edit article link pattern (used in article pages) / 编辑文章链接模板
+  # :filepath will be replaced with the actual file path
+  # :filepath 会被替换为实际文件路径
+  edit_link: https://github.com/example/hexo-theme-shit/edit/main/source/_posts/
+
+  # Show edit link on articles / 是否在文章上显示编辑链接
+  show_edit_link: true
+
+# ----------------------------------------------------------
+# Editorial Board / 编委介绍
+# Define the (fictional) editorial board members.
+# 定义（虚构的）编委成员。
+#
+# Each member has: name, role, affiliation, avatar, bio, ORCID, research interests.
+# 每个成员包含：姓名、职务、所属机构、头像、简介、ORCID、研究兴趣。
+# ----------------------------------------------------------
+editorial_board:
+  - name: Dr. A. N. Author
+    role: Editor-in-Chief
+    affiliation: Society for Hyperbolic and Imaginary Theories
+    avatar: /images/avatar-1.svg    # 头像图片路径
+    bio: Oversees strategic nonsense, style consistency, and ceremonial gravitas.
+    orcid: 0000-0000-SHIT-0001     # 虚构 ORCID
+    research_interests: [overconfidence, editorial choreography, official formatting]
+
+  - name: Prof. Vera Claim
+    role: Chair of Hyperbolic Claims
+    affiliation: Institute for Amplified Conclusions
+    avatar: /images/avatar-2.svg
+    bio: Specializes in the upward extension of findings beyond available evidence.
+    orcid: 0000-0000-SHIT-0002
+    research_interests: [claim inflation, inferential theatre]
+
+  - name: Reviewer 2
+    role: Permanent Reviewer 2
+    affiliation: Institute for Constructive Hostility
+    avatar: /images/avatar-3.svg
+    bio: Unavailable for comment yet foundational to all decisions.
+    orcid: 0000-0000-SHIT-0003
+    research_interests: [rejection ecology, unavailable criticism]
+
+  - name: Dr. Polly Graph
+    role: Statistical Editor for P-values Below 0.0001
+    affiliation: Center for Significance Optimization
+    avatar: /images/avatar-4.svg
+    bio: Maintains the rigorous appearance of inferential certainty.
+    orcid: 0000-0000-SHIT-0004
+    research_interests: [significance aesthetics, chart authority]
+
+# ----------------------------------------------------------
+# Indexing Claims / 收录声明
+# Where this journal claims to be indexed (all fictional).
+# 此期刊声称被收录的地方（全是虚构的）。
+#
+# These appear on the Indexing page. Customize with your own jokes.
+# 显示在收录页。可以自定义你的搞笑内容。
+# ----------------------------------------------------------
+indexing:
+  - Google Hallucinate
+  - PubMaybe
+  - Scopus? We are also asking.
+  - Web of Nonsense
+  - CrossRefused
+  - Directory of Openly Imaginary Journals
+  - The Unreliable Citation Index
+
+# ----------------------------------------------------------
+# Journal Metrics / 期刊指标
+# Stats displayed on the Metrics page.
+# 显示在指标页的统计数据。
+# ----------------------------------------------------------
+journal_metrics:
+  - label: Imaginary Impact Factor
+    value: Infinity
+  - label: Five-Year Absurdity Factor
+    value: 114.514
+  - label: Median Time to Acceptance
+    value: "3 seconds"
+  - label: Median Time to Retraction
+    value: Pending
+  - label: Reviewer 2 Hostility Index
+    value: Severe
+  - label: Average Evidence Availability
+    value: Not found
+  - label: Formatting Quality
+    value: Excellent
+  - label: Truth Correlation
+    value: Under investigation
+
+# ----------------------------------------------------------
+# Announcements / 公告
+# Displayed on the Announcements page.
+# 显示在公告页。
+# ----------------------------------------------------------
+announcements:
+  - type: Call for Papers
+    title: Special Issue on Reviewer 2 Across Civilizations
+    summary: Cross-cultural hostility, delayed replies, and universally unavailable editorial feedback.
+
+  - type: Editorial Hallucination Notice
+    title: Citation inflation thresholds updated for 2026
+    summary: Manuscripts now qualify for elevated gravitas after five emotionally necessary references.
+
+  - type: Retraction Announcement
+    title: A manuscript was withdrawn after partial contact with reality
+    summary: The board regrets the confusion and congratulates the authors on accidental relevance.
+
+# ----------------------------------------------------------
+# Special Issues / 特刊
+# Themed calls for papers displayed on the Special Issues page.
+# 显示在特刊页的主题征稿。
+# ----------------------------------------------------------
+special_issues:
+  - title: Prenatal Excellence and Early Academic Optimization
+    summary: Studies on publication before language, locomotion, or consent.
+
+  - title: Coffee, Anxiety, and Statistical Significance
+    summary: A multi-method examination of caffeine-assisted inference.
+
+  - title: Reviewer 2 Across Civilizations
+    summary: Historical, ecological, and spiritual perspectives on critical hostility.
+
+  - title: AI Hallucination as a Method
+    summary: Formalizing synthetic certainty in machine-written scholarship.
+
+  - title: Grant Writing Under Lunar Influence
+    summary: Administrative mysticism and orbital funding cycles.
+
+# ----------------------------------------------------------
+# FAQ / 常见问题
+# Q&A pairs displayed on the FAQ page.
+# 显示在 FAQ 页的问答对。
+# ----------------------------------------------------------
+faq:
+  - q: Is SHIT a real journal?
+    a: It is a real website for a fictional journal system with a clear satire notice.
+
+  - q: Are the articles peer-reviewed?
+    a: They are reviewed by an imaginary editorial process involving at least one hostile but unavailable Reviewer 2.
+
+  - q: Can I cite SHIT articles?
+    a: You can, but you should disclose context, genre, and your own standards of evidence.
+
+  - q: Can I submit my own manuscript?
+    a: Yes. The default workflow routes submissions through GitHub Issues.
+
+  - q: Are the references real?
+    a: Sometimes. Others are fictional, emotionally necessary, or generated upon reasonable hallucination.
+
+  - q: Are AI-generated articles allowed?
+    a: Yes, when clearly labeled and not presented as professional advice.
+
+  - q: What happens if an article accidentally becomes true?
+    a: It may be corrected, celebrated, or retracted depending on tone and timing.
+
+# ----------------------------------------------------------
+# For Authors / 作者指南
+# Author submission guidelines displayed on the For Authors page.
+# 显示在作者指南页的投稿指导。
+# ----------------------------------------------------------
+for_authors:
+  # Manuscript categories / 稿件分类
+  manuscript_categories:
+    - title: Retraction-Ready Report
+      description: For studies whose conclusions are mature enough for immediate concern.
+    - title: Imaginary Dataset
+      description: For datasets that would have been useful if they existed.
+    - title: Unnecessary Methods
+      description: For methods solving problems nobody was willing to define.
+    - title: Computational Daydream
+      description: For simulations performed primarily in the author's imagination.
+    - title: Peer Review Theater
+      description: For dramatized academic suffering involving Reviewer 2.
+    - title: Grant Proposal Fiction
+      description: For administrative documents with excessive confidence and insufficient budget.
+    - title: Citation Needed
+      description: For short claims urgently requiring references, preferably after publication.
+    - title: Synthetic Review
+      description: For AI-generated reviews with strong formatting and uncertain ontology.
+
+  # General requirements / 一般要求
+  general_requirements:
+    - The title must sound more confident than the evidence.
+    - The abstract should include at least one sentence beginning with "Here we show".
+    - Methods must be sufficiently detailed to appear reproducible.
+    - Results may be statistically significant, spiritually significant, or administratively significant.
+    - At least one limitation must be acknowledged and immediately ignored.
+    - References may be real, fictional, emotionally necessary, or generated upon reasonable hallucination.
+    - Conclusions should exceed the available evidence by at least 300%.
+
+  # Submission checklist / 投稿清单
+  checklist:
+    - The manuscript contains at least one unnecessary acronym.
+    - The conclusions exceed the data.
+    - Reviewer 2 has been emotionally anticipated.
+    - All imaginary participants have provided imaginary consent.
+    - The data are available upon reasonable hallucination.
+    - The article is clearly labeled as satire, fiction, AI-generated, or not professional advice where appropriate.
+
+# ----------------------------------------------------------
+# Policies / 政策声明
+# Ethics, disclaimer, and other policies displayed on the Policies page.
+# 显示在政策页的道德规范、免责声明等。
+# ----------------------------------------------------------
+policies:
+  - title: Research Ethics
+    text: Imaginary participants must be treated with dignity, fictional consent, and appropriate ceremonial oversight.
+
+  - title: AI-Generated Content Policy
+    text: SHIT welcomes AI-generated manuscripts, provided that the hallucinations are clearly labeled, aesthetically formatted, and not mistaken for professional advice.
+
+  - title: Fictional Data Policy
+    text: Fictional data must be internally consistent unless inconsistency is central to the hypothesis.
+
+  - title: Peer Review Policy
+    text: All manuscripts are reviewed by an imaginary editorial process involving at least one hostile but unavailable Reviewer 2.
+
+  - title: Conflict of Interest
+    text: Authors must disclose all conflicts with reality, causality, statistics, and common sense.
+
+  - title: Correction and Retraction Policy
+    text: Articles may be corrected for formatting drift and retracted if they accidentally become true.
+
+  - title: Professional Advice Disclaimer
+    text: Nothing published here should be interpreted as scientific, medical, legal, financial, academic, immigration, career, or professional advice.
+
+  - title: Citation Policy
+    text: Citations may be real, fictional, emotionally necessary, or generated after publication, but should be clearly attributable in tone.
+
+  - title: Data Availability Policy
+    text: Data should be available upon reasonable hallucination unless absence is integral to the method.
+
+  - title: Code Availability Policy
+    text: Code should be provided when it exists, when it helps, or when its nonexistence contributes to the narrative.
+
+  - title: Plagiarism Policy
+    text: Authors should avoid copying from reality without appropriate transformation and satire labeling.
+
+  - title: Accidental Truth Policy
+    text: If a manuscript becomes empirically supported, the editorial board may issue a note of concern and a reluctant congratulations.
+
+# ----------------------------------------------------------
+# About Page / 关于页面
+# Content for the About page.
+# 关于页面的内容。
+# ----------------------------------------------------------
+about:
+  # Main introduction text / 主要介绍文字
+  intro: The Society for Hyperbolic and Imaginary Theories is a fictional learned society dedicated to the advancement of plausible nonsense, synthetic scholarship, official-looking documents, and computationally generated overconfidence.
+
+  # Closing paragraph / 结尾段落
+  outro: SHIT publishes satirical articles, AI-generated academic parodies, fictional studies, and occasionally useful absurdities.
+
+  # Mission statements / 使命宣言
+  mission:
+    - To promote professionally formatted nonsense.
+    - To protect society from under-designed jokes.
+    - To advance the reproducibility of irreproducible claims.
+    - To provide a home for ideas too absurd for journals and too structured for tweets.
+    - To maintain a safe distance between confidence and evidence.
+
+# ----------------------------------------------------------
+# Footer / 页脚
+# Customize footer content, copyright, links, and social icons.
+# 自定义页脚内容、版权、链接和社交图标。
+# ----------------------------------------------------------
+footer:
+  # Copyright text / 版权文字
+  copyright: Society for Hyperbolic and Imaginary Theories
+
+  # Slogan displayed in footer / 页脚显示的口号
+  slogan: Wrong, but beautifully formatted.
+
+  # Disclaimer text / 免责声明文字
+  disclaimer: Nothing here constitutes professional advice. Some of it barely constitutes content.
+
+  # Footer navigation links / 页脚导航链接
+  links:
+    - label: Policies
+      translation_key: policies
+      path: /policies/
+    - label: For Authors
+      translation_key: for_authors
+      path: /for-authors/
+    - label: Submit
+      translation_key: submit
+      path: /submit/
+
+  # Social media / external links / 社交媒体和外部链接
+  social_links:
+    - label: GitHub
+      path: https://github.com/example/hexo-theme-shit
+    - label: Discussions
+      path: https://github.com/example/hexo-theme-shit/discussions

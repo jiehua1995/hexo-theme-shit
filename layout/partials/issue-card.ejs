@@ -1,0 +1,15 @@
+<%
+  const issueHref = issue.id === theme.homepage.current_issue_id
+    ? shit_page_path('current_issue')
+    : `${shit_page_path('articles')}?issue=${issue.id}`;
+%>
+<article class="issue-card">
+  <a href="<%= issueHref %>"><img src="<%= issue.cover %>" alt="<%= issue.title %> cover placeholder" /></a>
+  <div>
+    <div class="meta-line"><%= `Volume ${issue.volume} | Issue ${issue.issue} | ${issue.date}` %></div>
+    <h3><a href="<%= issueHref %>"><%= issue.title %></a></h3>
+    <p><%= issue.description %></p>
+    <p class="metric-inline"><%= `${issue.count} articles | ${issue.fake_impact_note}` %></p>
+    <a class="text-link" href="<%= issueHref %>">Open issue</a>
+  </div>
+</article>

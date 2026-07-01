@@ -1,0 +1,12 @@
+<div class="card-grid">
+  <% theme.editorial_board.forEach((member, idx) => { %>
+    <article class="sidebar-card">
+      <img class="avatar" src="/images/avatar-<%= idx + 1 %>.svg" alt="<%= member.name %> avatar" />
+      <div class="meta-line"><%= member.role %></div>
+      <h3><%= member.name %></h3>
+      <p><%= member.affiliation %></p>
+      <p><%= member.bio %></p>
+      <p class="metric-inline"><%= `ORCID ${member.orcid}` %></p>
+    </article>
+  <% }) %>
+</div>

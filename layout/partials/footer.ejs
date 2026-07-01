@@ -1,0 +1,33 @@
+<footer class="site-footer">
+  <div class="container-wide footer-grid">
+    <div>
+      <div class="brand-short"><%= shit_value(theme.journal.short_name) %></div>
+      <p><%= shit_value(theme.footer.slogan) %></p>
+      <p class="footer-note"><%= shit_value(theme.footer.disclaimer) %></p>
+      <% const themeRepoUrl = shit_theme_repo_url(); %>
+      <p class="footer-note footer-theme-credit">
+        <% if (themeRepoUrl) { %>
+          <%= shit_ui('theme_powered_by_label') %> <a href="<%= themeRepoUrl %>">hexo-theme-shit v<%= shit_theme_version() %></a>.
+        <% } else { %>
+          <%= shit_ui('theme_powered_by_label') %> hexo-theme-shit v<%= shit_theme_version() %>.
+        <% } %>
+      </p>
+    </div>
+    <div>
+      <h3><%= shit_ui('quick_links') %></h3>
+      <div class="stack-links">
+        <% theme.footer.links.forEach((link) => { %>
+          <a href="<%= link.path %>"><%= shit_link_label(link) %></a>
+        <% }) %>
+      </div>
+    </div>
+    <div>
+      <h3><%= shit_ui('elsewhere') %></h3>
+      <div class="stack-links">
+        <% theme.footer.social_links.forEach((link) => { %>
+          <a href="<%= link.path %>"><%= shit_link_label(link) %></a>
+        <% }) %>
+      </div>
+    </div>
+  </div>
+</footer>

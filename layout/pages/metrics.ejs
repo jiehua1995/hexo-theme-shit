@@ -1,0 +1,8 @@
+<div class="metric-card-grid">
+  <% theme.journal_metrics.forEach((metric) => { %>
+    <article class="metric-card">
+      <div class="metric-label"><%= metric.label %></div>
+      <div class="metric-value"><%= metric.value %></div>
+    </article>
+  <% }) %>
+</div>

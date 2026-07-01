@@ -1,0 +1,61 @@
+<article class="article-layout">
+  <div class="article-primary">
+    <%- partial('partials/article-header', { post: page }) %>
+    <section class="article-body"><%- page.content %></section>
+    <% if (page.data_availability || page.code_availability || page.competing_interests) { %>
+      <section class="section-block">
+        <div class="card-stack">
+          <% if (page.data_availability) { %>
+            <article class="sidebar-card">
+              <h3><%= shit_ui('data_availability') %></h3>
+              <p><%= page.data_availability %></p>
+            </article>
+          <% } %>
+          <% if (page.code_availability) { %>
+            <article class="sidebar-card">
+              <h3><%= shit_ui('code_availability') %></h3>
+              <p><%= page.code_availability %></p>
+            </article>
+          <% } %>
+          <% if (page.competing_interests) { %>
+            <article class="sidebar-card">
+              <h3><%= shit_ui('competing_interests') %></h3>
+              <p><%= page.competing_interests %></p>
+            </article>
+          <% } %>
+        </div>
+      </section>
+    <% } %>
+  </div>
+  <% if (theme.style.article_sidebar) { %>
+    <aside class="article-sidebar">
+      <%- partial('partials/metrics-panel', { post: page, title: shit_ui('article_metrics') }) %>
+      <%- partial('partials/citation-box', { post: page }) %>
+      <%- partial('partials/toc', { post: page }) %>
+      <section class="sidebar-card">
+        <h3><%= shit_ui('article_information') %></h3>
+        <dl class="definition-list">
+          <dt><%= shit_ui('article_no') %></dt><dd><%= shit_article_number(page) %></dd>
+          <dt><%= shit_ui('shit_id') %></dt><dd><%= shit_identifier(page) %></dd>
+          <dt><%= shit_ui('type') %></dt><dd><%= shit_article_type(page).name %></dd>
+          <dt><%= shit_ui('published') %></dt><dd><%= date(page.date, 'DD MMM YYYY') %></dd>
+          <% if (page.updated) { %><dt><%= shit_ui('updated') %></dt><dd><%= date(page.updated, 'DD MMM YYYY') %></dd><% } %>
+          <dt><%= shit_ui('doi_like') %></dt><dd><%= shit_doi_like(page) %></dd>
+          <dt><%= shit_ui('permanent_url') %></dt><dd><a href="<%= shit_absolute_url(page.path) %>"><%= shit_ui('open_canonical_article') %></a></dd>
+          <% if (page.keywords?.length) { %><dt><%= shit_ui('keywords') %></dt><dd><%= page.keywords.join(', ') %></dd><% } %>
+        </dl>
+      </section>
+      <% if (theme.github.show_edit_link) { %>
+        <section class="sidebar-card">
+          <h3><%= shit_ui('project_links') %></h3>
+          <div class="stack-links">
+            <% const editLink = shit_edit_link(page); if (editLink) { %>
+              <a class="text-link" href="<%= editLink %>"><%= shit_ui('edit_source') %></a>
+            <% } %>
+            <a class="text-link" href="<%= theme.github.issues_url %>"><%= shit_ui('open_issue_tracker') %></a>
+          </div>
+        </section>
+      <% } %>
+    </aside>
+  <% } %>
+</article>

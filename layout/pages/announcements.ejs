@@ -1,0 +1,9 @@
+<div class="card-stack">
+  <% theme.announcements.forEach((item) => { %>
+    <article class="sidebar-card">
+      <div class="meta-line"><%= item.type %></div>
+      <h3><%= item.title %></h3>
+      <p><%= item.summary %></p>
+    </article>
+  <% }) %>
+</div>

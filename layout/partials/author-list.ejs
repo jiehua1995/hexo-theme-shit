@@ -1,0 +1,7 @@
+<% if (Array.isArray(post.authors) && post.authors.length) { %>
+  <p class="meta-authors">
+    <% post.authors.forEach((author, index) => { %>
+      <span><%= author.name %><%= author.affiliation ? `, ${author.affiliation}` : '' %><%= index < post.authors.length - 1 ? '; ' : '' %></span>
+    <% }) %>
+  </p>
+<% } %>
