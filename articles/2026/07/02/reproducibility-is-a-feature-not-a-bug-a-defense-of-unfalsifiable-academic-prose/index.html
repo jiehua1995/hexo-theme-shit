@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" data-preset="institutional">
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>
+  (() => {
+    try {
+      const stored = window.localStorage.getItem("shitColorMode");
+      if (stored) {
+        document.documentElement.setAttribute("data-color-mode", stored);
+        document.documentElement.setAttribute("data-color-mode-choice", stored);
+      } else {
+        const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+        const initial = prefersDark ? "dark" : "light";
+        window.localStorage.setItem("shitColorMode", initial);
+        document.documentElement.setAttribute("data-color-mode", initial);
+        document.documentElement.setAttribute("data-color-mode-choice", initial);
+      }
+    } catch (_) {}
+  })();
+</script>
+<title>Reproducibility Is a Feature, Not a Bug: A Defense of Unfalsifiable Academic Prose | SHIT</title>
+<meta name="description" content="A professional-looking Hexo journal theme for fictional scholarship, AI-generated hallucinations, academic satire, useful absurdities, and official-looking nonsense. Satirical content notice applies." />
+<meta property="og:title" content="Reproducibility Is a Feature, Not a Bug: A Defense of Unfalsifiable Academic Prose" />
+<meta property="og:description" content="A professional-looking Hexo journal theme for fictional scholarship, AI-generated hallucinations, academic satire, useful absurdities, and official-looking nonsense." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/reproducibility-is-a-feature-not-a-bug-a-defense-of-unfalsifiable-academic-prose/" />
+<meta property="og:image" content="https://jiehua1995.github.io/hexo-theme-shit/images/shit-seal.svg/" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/reproducibility-is-a-feature-not-a-bug-a-defense-of-unfalsifiable-academic-prose/" />
+<link rel="icon" href="/hexo-theme-shit/images/shit-seal.svg" />
+<link rel="alternate" type="application/rss+xml" title="SHIT RSS" href="/hexo-theme-shit/atom.xml" />
+<link rel="stylesheet" href="/hexo-theme-shit/css/main.css" />
+
+  <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.2"></head>
+  <body
+    class="journal-body"
+    data-locale="en"
+    data-ui-copy-code="Copy code"
+    data-ui-copied="Copied"
+    data-ui-copy-failed="Copy failed"
+    data-ui-search-loading="Loading index of official-looking nonsense..."
+    data-ui-search-ready="__COUNT__ records ready for inspection."
+    data-ui-search-results-for="__COUNT__ result__SUFFIX__ for &#34;__QUERY__&#34;."
+    data-ui-search-empty-title="No results found"
+    data-ui-search-empty-text="Try a title fragment, an author name, a tag, or a collection keyword."
+    data-ui-search-failed="Search index could not be loaded."
+    data-ui-mode-light="Light mode"
+    data-ui-mode-dark="Dark mode"
+    data-ui-toggle-theme="Toggle color mode"
+  >
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-sm">Skip to content</a>
+    
+  <section class="satire-banner is-sticky" data-dismissible="true">
+    <div class="container-wide satire-banner-inner">
+      <div>
+        <strong>Satirical Content Notice:</strong>
+        <span>SHIT publishes fictional, humorous, and intentionally absurd content. Nothing on this site should be interpreted as scientific, medical, legal, financial, academic, immigration, career, or professional advice.</span>
+      </div>
+      
+        <button class="dismiss-banner" type="button" aria-label="Dismiss notice">Dismiss</button>
+      
+    </div>
+  </section>
+
+
+    <div class="site-search-shell" id="site-search-dialog" data-index-url="/hexo-theme-shit/search-index.json" hidden aria-hidden="true">
+      <div class="site-search-backdrop" data-search-close="true"></div>
+      <section class="site-search-panel" aria-label="Site search">
+        <div class="site-search-head">
+          <div>
+            <div class="eyebrow">Search</div>
+            <h2 class="section-title">Find articles, pages, and structured nonsense</h2>
+          </div>
+          <button class="dismiss-banner search-close" type="button" data-search-close="true" aria-label="Close">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+        <label class="search-input-wrap" for="site-search-input">
+          <span class="sr-only">Search</span>
+          <input id="site-search-input" class="search-input" type="search" placeholder="Search by title, author, tag, abstract, or collection" autocomplete="off" />
+        </label>
+        <p class="metric-inline search-status" id="site-search-status">Type to search the current issue, archive, and static pages.</p>
+        <div class="search-results" id="site-search-results"></div>
+      </section>
+    </div>
+    <div class="journal-shell">
+      <header class="masthead">
+  <div class="container-wide masthead-inner">
+    <a class="brand-lockup" href="/hexo-theme-shit/">
+      <img class="brand-seal" src="/hexo-theme-shit/images/shit-seal.svg" alt="SHIT seal" />
+      <div>
+        <div class="brand-short">SHIT</div>
+        <div class="brand-full">Society for Hyperbolic and Imaginary Theories</div>
+      </div>
+    </a>
+    <div class="masthead-meta">
+      <div>Official-looking scholarship for fictional findings.</div>
+      <div>ISSN 2049-0001 | eISSN 2049-0002</div>
+      <div>Society for Hyperbolic and Imaginary Theories | Berlin / Internet / Reviewer 2&#39;s imagination</div>
+    </div>
+  </div>
+</header>
+
+      <nav class="main-nav" aria-label="Main navigation">
+  <div class="container-wide nav-inner">
+    
+      <a href="/" class="">Home</a>
+    
+      <a href="/articles/" class="">Articles</a>
+    
+      <a href="/current-issue/" class="">Current Issue</a>
+    
+      <a href="/collections/" class="">Collections</a>
+    
+      <a href="/policies/" class="">Policies</a>
+    
+      <a href="/editorial-board/" class="">Editorial Board</a>
+    
+      <a href="/submit/" class="">Submit</a>
+    
+    <div class="nav-actions">
+      <button class="nav-icon-button nav-search-trigger" type="button" data-search-open="true" aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <span class="sr-only">Search</span>
+      </button>
+      <button class="nav-icon-button nav-theme-toggle" type="button" data-color-mode-toggle="true" aria-label="Toggle color mode">
+        <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+        <span class="sr-only">Toggle color mode</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+      <main id="main-content" class="journal-main">
+        <article class="article-layout">
+  <div class="article-primary">
+    
+<header class="article-header">
+  <div class="notice-row">
+  
+    <span class="notice-badge">SATIRE</span>
+  
+    <span class="notice-badge">FICTIONAL STUDY</span>
+  
+    <span class="notice-badge">AI-GENERATED</span>
+  
+    <span class="notice-badge">NOT PROFESSIONAL ADVICE</span>
+  
+    <span class="notice-badge">DOI-LIKE IDENTIFIER ONLY</span>
+  
+    <span class="notice-badge">CANNOT BE REPLICATED</span>
+  
+</div>
+
+  <div class="meta-line">Position Paper | Article V1I2-06</div>
+  <h1 class="article-title">Reproducibility Is a Feature, Not a Bug: A Defense of Unfalsifiable Academic Prose</h1>
+  <p class="article-subtitle">On the elegance of statements that cannot be wrong</p>
+  
+  <p class="meta-authors">
+    
+      <span>Vera Falsifiable, Institute of Safe Claims</span>
+    
+  </p>
+
+
+  
+  <ul class="affiliation-list">
+    
+      <li>Institute of Safe Claims</li>
+    
+  </ul>
+
+
+  <div class="article-meta-grid">
+    <div><strong>Article No.</strong><span>V1I2-06</span></div>
+    <div><strong>Published</strong><span>02 Jul 2026</span></div>
+    <div><strong>Updated</strong><span>01 Jul 2026</span></div>
+    <div><strong>Issue</strong><span>Volume 1 | Issue 2 | 202607</span></div>
+    <div><strong>Pages</strong><span>76-90</span></div>
+    <div><strong>SHIT ID</strong><span>shit.2026.07.02</span></div>
+    <div><strong>DOI-like</strong><span>10.shit/2026.07.02.reproducibility-is-a-feature-not-a-bug-a-defense-of-unfalsifiable-academic-prose (not a DOI)</span></div>
+    <div><strong>Permanent URL</strong><span><a href="https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/reproducibility-is-a-feature-not-a-bug-a-defense-of-unfalsifiable-academic-prose/">https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/reproducibility-is-a-feature-not-a-bug-a-defense-of-unfalsifiable-academic-prose/</a></span></div>
+  </div>
+  
+  <section class="abstract-box">
+    <h2>Abstract</h2>
+    <p>Here we argue that the most robust academic prose is deliberately constructed to resist falsification, making it immune to the reproducible-research movement in the same way that a ghost is immune to a security camera.
+</p>
+    
+      <p class="meta-keywords"><strong>Keywords:</strong> reproducibility, unfalsifiability, academic writing</p>
+    
+  </section>
+
+
+</header>
+
+    <section class="article-body"><p>由AI幽默专家编造。</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>The reproducibility crisis in science is frequently framed as a failure to replicate specific findings. We propose a different diagnosis: the crisis results from attempting to replicate prose that was never designed to be replicated in the first place.</p>
+<p>Academic writing has always served multiple functions simultaneously: conveying results, building career capital, soothing reviewer anxiety, and preserving the author’s emotional comfort. The most elegant sentences satisfy all of these requirements by being structured such that they cannot be proven wrong under any conceivable set of observations.</p>
+<h2 id="The-Architecture-of-Unfalsifiable-Prose"><a href="#The-Architecture-of-Unfalsifiable-Prose" class="headerlink" title="The Architecture of Unfalsifiable Prose"></a>The Architecture of Unfalsifiable Prose</h2><p>We identify five structural features of unfalsifiable academic prose:</p>
+<ol>
+<li><strong>Strategic Ambiguity</strong>: “Our findings suggest a potential association…” (i.e., we found nothing and called it a suggestion)</li>
+<li><strong>Qualifying Certainty</strong>: “It is important to note that these results should be interpreted with caution, although they do point in a meaningful direction…” (i.e., we do not believe our results either)</li>
+<li><strong>Mechanistic Post-Hocism</strong>: “This effect may be driven by underlying mechanisms that are consistent with existing theory…” (i.e., we do not know the mechanism, but we know it exists)</li>
+<li><strong>Citation Shielding</strong>: Surrounding a claim with 12 references, thereby distributing the burden of credibility across a committee</li>
+<li><strong>The Future-Tense Escape Clause</strong>: “Future work will clarify these relationships…” (i.e., this relationship will never be clarified by us)</li>
+</ol>
+<h2 id="Empirical-Validation"><a href="#Empirical-Validation" class="headerlink" title="Empirical Validation"></a>Empirical Validation</h2><p>We analyzed 500 abstracts from a high-impact journal and found that the proportion of unfalsifiable statements (as defined above) correlated negatively with actual replicability (r &#x3D; -0.76). Articles containing more than 60% unfalsifiable prose were subsequently replicated at a rate of 4%, compared to 31% for articles with fewer than 20% unfalsifiable prose.</p>
+<h2 id="The-Unfalsifiability-Index"><a href="#The-Unfalsifiability-Index" class="headerlink" title="The Unfalsifiability Index"></a>The Unfalsifiability Index</h2><p>We propose the Unfalsifiability Index (UI), calculated as:</p>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mi>I</mi><mo>=</mo><mfrac><mtext>number of qualifying phrases</mtext><mtext>total sentences</mtext></mfrac><mo>×</mo><mn>100</mn></mrow><annotation encoding="application/x-tex">UI = \frac{\text{number of qualifying phrases}}{\text{total sentences}} \times 100</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.109em;">U</span><span class="mord mathnormal" style="margin-right:0.0785em;">I</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.2772em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9322em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">total sentences</span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.4461em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord text mtight"><span class="mord mtight">number of qualifying phrases</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">100</span></span></span></span>
+
+<p>A UI above 40 indicates prose of sufficient elegance to survive any reviewer comment. A UI above 70 indicates a paper that may be intellectually vacuous but will never be proven wrong.</p>
+<h2 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h2><p>The reproducibility movement would benefit from recognizing that unfalsifiability is not a bug of academic prose but its defining feature. Rather than fighting this tendency, we should formalize it, teach it, and perhaps certify authors who consistently achieve UI &gt; 60 as “Professionally Vague.”</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ol>
+<li>Falsifiable V. On the aesthetics of saying nothing clearly. Journal of Academic Evasion. 2025.</li>
+<li>Popper K. (posthumous) I thought I was clear about this. Letters from Beyond the Grave. 2026.</li>
+</ol>
+</section>
+    
+      <section class="section-block">
+        <div class="card-stack">
+          
+            <article class="sidebar-card">
+              <h3>Data Availability</h3>
+              <p>The claims are available everywhere and nowhere simultaneously.</p>
+            </article>
+          
+          
+            <article class="sidebar-card">
+              <h3>Code Availability</h3>
+              <p>Replication is possible if you reinterpret everything differently.</p>
+            </article>
+          
+          
+            <article class="sidebar-card">
+              <h3>Competing Interests</h3>
+              <p>The author has never been proven wrong and considers this a competitive advantage.</p>
+            </article>
+          
+        </div>
+      </section>
+    
+  </div>
+  
+    <aside class="article-sidebar">
+      <section class="sidebar-card">
+  <h3>Article Metrics</h3>
+  <dl class="definition-list">
+    
+      <dt>Absurdity Score</dt>
+      <dd>92</dd>
+    
+      <dt>Plausibility Index</dt>
+      <dd>71</dd>
+    
+      <dt>Reviewer 2 Risk</dt>
+      <dd>Cannot be pinned down</dd>
+    
+      <dt>Evidence Status</dt>
+      <dd>Intentionally vague</dd>
+    
+      <dt>Reproducibility</dt>
+      <dd>By design</dd>
+    
+  </dl>
+</section>
+
+      <section class="sidebar-card">
+  <div class="section-heading-row citation-heading-row">
+    <h3>How to Cite</h3>
+    <button type="button" class="copy-citation" data-citation="Vera Falsifiable (2026). Reproducibility Is a Feature, Not a Bug: A Defense of Unfalsifiable Academic Prose. SHIT. Article V1I2-06. https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/reproducibility-is-a-feature-not-a-bug-a-defense-of-unfalsifiable-academic-prose/">Copy citation</button>
+  </div>
+  <p class="citation-text">Vera Falsifiable (2026). Reproducibility Is a Feature, Not a Bug: A Defense of Unfalsifiable Academic Prose. SHIT. Article V1I2-06. https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/reproducibility-is-a-feature-not-a-bug-a-defense-of-unfalsifiable-academic-prose/</p>
+  <p class="citation-text"><strong>Permanent URL:</strong> <a href="https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/reproducibility-is-a-feature-not-a-bug-a-defense-of-unfalsifiable-academic-prose/">https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/reproducibility-is-a-feature-not-a-bug-a-defense-of-unfalsifiable-academic-prose/</a></p>
+</section>
+
+      
+  <section class="sidebar-card">
+    <h3>Table of Contents</h3>
+    <div class="toc-wrap"><ol class="toc-list"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#Introduction"><span class="toc-list-text">Introduction</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#The-Architecture-of-Unfalsifiable-Prose"><span class="toc-list-text">The Architecture of Unfalsifiable Prose</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#Empirical-Validation"><span class="toc-list-text">Empirical Validation</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#The-Unfalsifiability-Index"><span class="toc-list-text">The Unfalsifiability Index</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#Discussion"><span class="toc-list-text">Discussion</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#References"><span class="toc-list-text">References</span></a></li></ol></div>
+  </section>
+
+
+      <section class="sidebar-card">
+        <h3>Article Information</h3>
+        <dl class="definition-list">
+          <dt>Article No.</dt><dd>V1I2-06</dd>
+          <dt>SHIT ID</dt><dd>shit.2026.07.02</dd>
+          <dt>Type</dt><dd>Position Paper</dd>
+          <dt>Published</dt><dd>02 Jul 2026</dd>
+          <dt>Updated</dt><dd>01 Jul 2026</dd>
+          <dt>DOI-like</dt><dd>10.shit/2026.07.02.reproducibility-is-a-feature-not-a-bug-a-defense-of-unfalsifiable-academic-prose</dd>
+          <dt>Permanent URL</dt><dd><a href="https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/reproducibility-is-a-feature-not-a-bug-a-defense-of-unfalsifiable-academic-prose/">Open canonical article</a></dd>
+          <dt>Keywords</dt><dd>reproducibility, unfalsifiability, academic writing</dd>
+        </dl>
+      </section>
+      
+        <section class="sidebar-card">
+          <h3>Project Links</h3>
+          <div class="stack-links">
+            
+              <a class="text-link" target="_blank" rel="noopener" href="https://github.com/example/hexo-theme-shit/edit/main/source/_posts/reproducibility-is-a-feature-not-a-bug-a-defense-of-unfalsifiable-academic-prose.md">Edit source on GitHub</a>
+            
+            <a class="text-link" target="_blank" rel="noopener" href="https://github.com/example/hexo-theme-shit/issues">Open issue tracker</a>
+          </div>
+        </section>
+      
+    </aside>
+  
+</article>
+
+      </main>
+      <footer class="site-footer">
+  <div class="container-wide footer-grid">
+    <div>
+      <div class="brand-short">SHIT</div>
+      <p>Wrong, but beautifully formatted.</p>
+      <p class="footer-note">Nothing here constitutes professional advice. Some of it barely constitutes content.</p>
+      
+      <p class="footer-note footer-theme-credit">
+        
+          Theme powered by <a target="_blank" rel="noopener" href="https://github.com/example/hexo-theme-shit">hexo-theme-shit v1.0.0</a>.
+        
+      </p>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <div class="stack-links">
+        
+          <a href="/policies/">Policies</a>
+        
+          <a href="/for-authors/">For Authors</a>
+        
+          <a href="/submit/">Submit</a>
+        
+      </div>
+    </div>
+    <div>
+      <h3>Elsewhere</h3>
+      <div class="stack-links">
+        
+          <a target="_blank" rel="noopener" href="https://github.com/example/hexo-theme-shit">GitHub</a>
+        
+          <a target="_blank" rel="noopener" href="https://github.com/example/hexo-theme-shit/discussions">Discussions</a>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <button class="back-to-top" type="button" aria-label="Back to top">
+      <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+      <span class="sr-only">Back to top</span>
+    </button>
+    <script src="/hexo-theme-shit/js/main.js"></script>
+  </body>
+</html>

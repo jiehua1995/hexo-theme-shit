@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <circle cx="100" cy="100" r="96" fill="#8b251f"/>
+  <circle cx="100" cy="100" r="88" fill="none" stroke="#c4a84a" stroke-width="2" stroke-dasharray="4 3"/>
+  <circle cx="100" cy="100" r="82" fill="none" stroke="#c4a84a" stroke-width="1"/>
+  <path d="M100 48l6 12l13 2l-10 9l3 13l-12-6l-12 6l3-13l-10-9l13-2z" fill="#c4a84a"/>
+  <text x="100" y="130" text-anchor="middle" font-family="Georgia,serif" font-size="22" fill="#e8e4dc" font-weight="bold">SHIT</text>
+  <text x="100" y="148" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="7" fill="#d4c49a" letter-spacing="0.12em">OFFICIAL SEAL</text>
+  <circle cx="100" cy="100" r="78" fill="none" stroke="#c4a84a" stroke-width="0.5"/>
+</svg>

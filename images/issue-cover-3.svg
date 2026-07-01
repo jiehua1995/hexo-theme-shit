@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 540" fill="none">
+  <rect width="420" height="540" fill="#f8f6f0"/>
+  <rect width="420" height="540" fill="none" stroke="#2a3040" stroke-width="2"/>
+  <!-- Header: summer theme -->
+  <rect x="0" y="0" width="420" height="130" fill="#1a3a3a"/>
+  <text x="30" y="55" font-family="Georgia,serif" font-size="36" fill="#e8e4dc" font-weight="bold">SHIT</text>
+  <text x="30" y="82" font-family="'Segoe UI',sans-serif" font-size="11" fill="#c4a84a">Vol. 1 · Issue 2 · July 2026</text>
+  <line x1="0" y1="130" x2="420" y2="130" stroke="#5a9abf" stroke-width="2"/>
+  
+  <!-- Summer/thermal theme -->
+  <text x="30" y="165" font-family="Georgia,serif" font-size="18" fill="#2a3040" font-weight="bold">The Thermodynamics of</text>
+  <text x="30" y="188" font-family="Georgia,serif" font-size="18" fill="#2a3040" font-weight="bold">Confidence and the Acoustics</text>
+  <text x="30" y="211" font-family="Georgia,serif" font-size="18" fill="#2a3040" font-weight="bold">of Open-Plan Offices</text>
+  
+  <!-- Thermal chart -->
+  <rect x="30" y="230" width="360" height="120" fill="#e8f4f4" rx="2"/>
+  <!-- Temperature gradient bars -->
+  <rect x="50" y="320" width="25" height="15" rx="2" fill="#5a9abf"/>
+  <rect x="85" y="300" width="25" height="35" rx="2" fill="#5a9abf"/>
+  <rect x="120" y="275" width="25" height="60" rx="2" fill="#c4a84a"/>
+  <rect x="155" y="260" width="25" height="75" rx="2" fill="#c4a84a"/>
+  <rect x="190" y="245" width="25" height="90" rx="2" fill="#8f2333"/>
+  <rect x="225" y="235" width="25" height="100" rx="2" fill="#8f2333"/>
+  <rect x="260" y="250" width="25" height="85" rx="2" fill="#8f2333"/>
+  <rect x="295" y="265" width="25" height="70" rx="2" fill="#c4a84a"/>
+  <rect x="330" y="280" width="25" height="55" rx="2" fill="#c4a84a"/>
+  <rect x="365" y="295" width="25" height="40" rx="2" fill="#5a9abf"/>
+  <!-- Trend line -->
+  <path d="M62 312 L97 292 L132 267 L167 252 L202 237 L237 227 L272 242 L307 257 L342 272 L377 287" stroke="#e8e4dc" stroke-width="1.5" fill="none"/>
+  
+  <!-- Article list -->
+  <rect x="30" y="370" width="360" height="140" fill="#fafaf8" stroke="#d5d1c8" stroke-width="1" rx="2"/>
+  <text x="50" y="395" font-family="Georgia,serif" font-size="14" fill="#2a3040" font-weight="bold">Table of Contents</text>
+  <line x1="50" y1="405" x2="370" y2="405" stroke="#e0dcd4" stroke-width="1"/>
+  
+  <rect x="50" y="415" width="20" height="12" rx="6" fill="#1a3a3a"/>
+  <text x="80" y="425" font-family="'Segoe UI',sans-serif" font-size="9" fill="#4a453c">The Thermodynamics of Confidence</text>
+  
+  <rect x="50" y="438" width="20" height="12" rx="6" fill="#5a9abf"/>
+  <text x="80" y="448" font-family="'Segoe UI',sans-serif" font-size="9" fill="#4a453c">Chair Orientation and Reviewer Sympathy</text>
+  
+  <rect x="50" y="461" width="20" height="12" rx="6" fill="#8f2333"/>
+  <text x="80" y="471" font-family="'Segoe UI',sans-serif" font-size="9" fill="#4a453c">Peer Review as Performance Art</text>
+  
+  <rect x="50" y="484" width="20" height="12" rx="6" fill="#c4a84a"/>
+  <text x="80" y="494" font-family="'Segoe UI',sans-serif" font-size="9" fill="#4a453c">The Statistical Significance of Caffeine</text>
+  
+  <rect x="50" y="507" width="20" height="12" rx="6" fill="#2d4a5e"/>
+  <text x="80" y="517" font-family="'Segoe UI',sans-serif" font-size="9" fill="#4a453c">The Acoustic Ecology of Open-Plan Offices</text>
+  
+  <!-- Tagline -->
+  <text x="210" y="530" text-anchor="middle" font-family="Georgia,serif" font-size="10" fill="#6a7b8c" font-style="italic">Summer issue: hot claims, cool methods, warm coffee.</text>
+</svg>

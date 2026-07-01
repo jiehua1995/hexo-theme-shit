@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" data-preset="institutional">
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>
+  (() => {
+    try {
+      const stored = window.localStorage.getItem("shitColorMode");
+      if (stored) {
+        document.documentElement.setAttribute("data-color-mode", stored);
+        document.documentElement.setAttribute("data-color-mode-choice", stored);
+      } else {
+        const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+        const initial = prefersDark ? "dark" : "light";
+        window.localStorage.setItem("shitColorMode", initial);
+        document.documentElement.setAttribute("data-color-mode", initial);
+        document.documentElement.setAttribute("data-color-mode-choice", initial);
+      }
+    } catch (_) {}
+  })();
+</script>
+<title>Indexing | SHIT</title>
+<meta name="description" content="Where SHIT claims to be indexed. Satirical content notice applies." />
+<meta property="og:title" content="Indexing" />
+<meta property="og:description" content="Where SHIT claims to be indexed." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jiehua1995.github.io/hexo-theme-shit/indexing/index.html/" />
+<meta property="og:image" content="https://jiehua1995.github.io/hexo-theme-shit/images/shit-seal.svg/" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://jiehua1995.github.io/hexo-theme-shit/indexing/index.html/" />
+<link rel="icon" href="/hexo-theme-shit/images/shit-seal.svg" />
+<link rel="alternate" type="application/rss+xml" title="SHIT RSS" href="/hexo-theme-shit/atom.xml" />
+<link rel="stylesheet" href="/hexo-theme-shit/css/main.css" />
+
+  <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.2"></head>
+  <body
+    class="journal-body"
+    data-locale="en"
+    data-ui-copy-code="Copy code"
+    data-ui-copied="Copied"
+    data-ui-copy-failed="Copy failed"
+    data-ui-search-loading="Loading index of official-looking nonsense..."
+    data-ui-search-ready="__COUNT__ records ready for inspection."
+    data-ui-search-results-for="__COUNT__ result__SUFFIX__ for &#34;__QUERY__&#34;."
+    data-ui-search-empty-title="No results found"
+    data-ui-search-empty-text="Try a title fragment, an author name, a tag, or a collection keyword."
+    data-ui-search-failed="Search index could not be loaded."
+    data-ui-mode-light="Light mode"
+    data-ui-mode-dark="Dark mode"
+    data-ui-toggle-theme="Toggle color mode"
+  >
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-sm">Skip to content</a>
+    
+  <section class="satire-banner is-sticky" data-dismissible="true">
+    <div class="container-wide satire-banner-inner">
+      <div>
+        <strong>Satirical Content Notice:</strong>
+        <span>SHIT publishes fictional, humorous, and intentionally absurd content. Nothing on this site should be interpreted as scientific, medical, legal, financial, academic, immigration, career, or professional advice.</span>
+      </div>
+      
+        <button class="dismiss-banner" type="button" aria-label="Dismiss notice">Dismiss</button>
+      
+    </div>
+  </section>
+
+
+    <div class="site-search-shell" id="site-search-dialog" data-index-url="/hexo-theme-shit/search-index.json" hidden aria-hidden="true">
+      <div class="site-search-backdrop" data-search-close="true"></div>
+      <section class="site-search-panel" aria-label="Site search">
+        <div class="site-search-head">
+          <div>
+            <div class="eyebrow">Search</div>
+            <h2 class="section-title">Find articles, pages, and structured nonsense</h2>
+          </div>
+          <button class="dismiss-banner search-close" type="button" data-search-close="true" aria-label="Close">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+        <label class="search-input-wrap" for="site-search-input">
+          <span class="sr-only">Search</span>
+          <input id="site-search-input" class="search-input" type="search" placeholder="Search by title, author, tag, abstract, or collection" autocomplete="off" />
+        </label>
+        <p class="metric-inline search-status" id="site-search-status">Type to search the current issue, archive, and static pages.</p>
+        <div class="search-results" id="site-search-results"></div>
+      </section>
+    </div>
+    <div class="journal-shell">
+      <header class="masthead">
+  <div class="container-wide masthead-inner">
+    <a class="brand-lockup" href="/hexo-theme-shit/">
+      <img class="brand-seal" src="/hexo-theme-shit/images/shit-seal.svg" alt="SHIT seal" />
+      <div>
+        <div class="brand-short">SHIT</div>
+        <div class="brand-full">Society for Hyperbolic and Imaginary Theories</div>
+      </div>
+    </a>
+    <div class="masthead-meta">
+      <div>Official-looking scholarship for fictional findings.</div>
+      <div>ISSN 2049-0001 | eISSN 2049-0002</div>
+      <div>Society for Hyperbolic and Imaginary Theories | Berlin / Internet / Reviewer 2&#39;s imagination</div>
+    </div>
+  </div>
+</header>
+
+      <nav class="main-nav" aria-label="Main navigation">
+  <div class="container-wide nav-inner">
+    
+      <a href="/" class="">Home</a>
+    
+      <a href="/articles/" class="">Articles</a>
+    
+      <a href="/current-issue/" class="">Current Issue</a>
+    
+      <a href="/collections/" class="">Collections</a>
+    
+      <a href="/policies/" class="">Policies</a>
+    
+      <a href="/editorial-board/" class="">Editorial Board</a>
+    
+      <a href="/submit/" class="">Submit</a>
+    
+    <div class="nav-actions">
+      <button class="nav-icon-button nav-search-trigger" type="button" data-search-open="true" aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <span class="sr-only">Search</span>
+      </button>
+      <button class="nav-icon-button nav-theme-toggle" type="button" data-color-mode-toggle="true" aria-label="Toggle color mode">
+        <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+        <span class="sr-only">Toggle color mode</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+      <main id="main-content" class="journal-main">
+        
+<section class="page-intro">
+  <div class="eyebrow">Internal Page</div>
+  <h1 class="page-title">Indexing</h1>
+  <p class="page-summary">Where SHIT claims to be indexed.</p>
+</section>
+<section class="section-block prose-block">
+  <ul class="ordered-list">
+    
+      <li>Google Hallucinate</li>
+    
+      <li>PubMaybe</li>
+    
+      <li>Scopus? We are also asking.</li>
+    
+      <li>Web of Nonsense</li>
+    
+      <li>CrossRefused</li>
+    
+      <li>Directory of Openly Imaginary Journals</li>
+    
+      <li>The Unreliable Citation Index</li>
+    
+  </ul>
+</section>
+
+
+      </main>
+      <footer class="site-footer">
+  <div class="container-wide footer-grid">
+    <div>
+      <div class="brand-short">SHIT</div>
+      <p>Wrong, but beautifully formatted.</p>
+      <p class="footer-note">Nothing here constitutes professional advice. Some of it barely constitutes content.</p>
+      
+      <p class="footer-note footer-theme-credit">
+        
+          Theme powered by <a target="_blank" rel="noopener" href="https://github.com/example/hexo-theme-shit">hexo-theme-shit v1.0.0</a>.
+        
+      </p>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <div class="stack-links">
+        
+          <a href="/policies/">Policies</a>
+        
+          <a href="/for-authors/">For Authors</a>
+        
+          <a href="/submit/">Submit</a>
+        
+      </div>
+    </div>
+    <div>
+      <h3>Elsewhere</h3>
+      <div class="stack-links">
+        
+          <a target="_blank" rel="noopener" href="https://github.com/example/hexo-theme-shit">GitHub</a>
+        
+          <a target="_blank" rel="noopener" href="https://github.com/example/hexo-theme-shit/discussions">Discussions</a>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <button class="back-to-top" type="button" aria-label="Back to top">
+      <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+      <span class="sr-only">Back to top</span>
+    </button>
+    <script src="/hexo-theme-shit/js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 280" fill="none">
+  <rect width="480" height="280" fill="#fafaf8"/>
+  <rect x="1" y="1" width="478" height="278" fill="none" stroke="#c5c0b4" stroke-width="1"/>
+  <text x="240" y="28" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#4a453c">Figure 1: Publication Velocity Before Independent Respiration (n=2,048)</text>
+  
+  <!-- Chart area -->
+  <line x1="70" y1="230" x2="460" y2="230" stroke="#d0ccc4" stroke-width="1"/>
+  <line x1="70" y1="50" x2="70" y2="230" stroke="#d0ccc4" stroke-width="1"/>
+  
+  <!-- Y axis labels -->
+  <text x="60" y="233" text-anchor="end" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8a857c">0</text>
+  <text x="60" y="185" text-anchor="end" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8a857c">25</text>
+  <text x="60" y="137" text-anchor="end" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8a857c">50</text>
+  <text x="60" y="89" text-anchor="end" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8a857c">75</text>
+  <text x="60" y="53" text-anchor="end" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8a857c">100</text>
+  
+  <!-- X axis labels -->
+  <text x="100" y="245" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8a857c">Gestation</text>
+  <text x="100" y="257" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="7" fill="#a89b8c">Month 1-3</text>
+  
+  <text x="210" y="245" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8a857c">Month 4-6</text>
+  <text x="320" y="245" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8a857c">Month 7-9</text>
+  <text x="430" y="245" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="8" fill="#8a857c">Post-birth</text>
+  
+  <!-- High ambition group - tall bars -->
+  <rect x="80" y="100" width="30" height="130" rx="2" fill="#5a9abf" opacity="0.6"/>
+  <rect x="185" y="75" width="30" height="155" rx="2" fill="#5a9abf" opacity="0.6"/>
+  <rect x="290" y="65" width="30" height="165" rx="2" fill="#5a9abf" opacity="0.6"/>
+  <rect x="410" y="45" width="30" height="185" rx="2" fill="#5a9abf" opacity="0.6"/>
+  
+  <!-- Low ambition group - shorter bars -->
+  <rect x="118" y="155" width="24" height="75" rx="2" fill="#8a7b6b" opacity="0.5"/>
+  <rect x="223" y="140" width="24" height="90" rx="2" fill="#8a7b6b" opacity="0.5"/>
+  <rect x="328" y="130" width="24" height="100" rx="2" fill="#8a7b6b" opacity="0.5"/>
+  <rect x="448" y="115" width="24" height="115" rx="2" fill="#8a7b6b" opacity="0.5"/>
+  
+  <!-- Confidence bands -->
+  <path d="M95 85 Q200 60, 305 50 Q370 45, 425 30" stroke="#c4a84a" stroke-width="2" fill="none"/>
+  <path d="M95 100 Q200 78, 305 70 Q370 65, 425 55" stroke="#c4a84a" stroke-width="1" fill="none" stroke-dasharray="3 3"/>
+  
+  <!-- Legend -->
+  <rect x="310" y="34" width="150" height="50" rx="3" fill="white" stroke="#e0dcd4" stroke-width="1"/>
+  <text x="320" y="48" font-family="'Segoe UI',sans-serif" font-size="8" fill="#4a453c" font-weight="bold">Strata</text>
+  <rect x="320" y="54" width="10" height="8" rx="1" fill="#5a9abf" opacity="0.6"/>
+  <text x="336" y="62" font-family="'Segoe UI',sans-serif" font-size="7" fill="#4a453c">High Impact Family</text>
+  <rect x="320" y="68" width="10" height="8" rx="1" fill="#8a7b6b" opacity="0.5"/>
+  <text x="336" y="76" font-family="'Segoe UI',sans-serif" font-size="7" fill="#4a453c">Control Group</text>
+  <path d="M380 58 L390 54" stroke="#c4a84a" stroke-width="2" fill="none"/>
+  <text x="394" y="58" font-family="'Segoe UI',sans-serif" font-size="7" fill="#8a7b6b">Destiny Trend</text>
+  
+  <!-- Annotation -->
+  <rect x="70" y="25" width="200" height="14" rx="7" fill="#fef2f2" stroke="#e8d0cf" stroke-width="0.5"/>
+  <text x="170" y="35" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="7" fill="#8f2333">Adjustment: womb acoustics, seminar exposure</text>
+  
+  <!-- N value -->
+  <text x="240" y="270" text-anchor="middle" font-family="'Segoe UI',sans-serif" font-size="8" fill="#a89b8c">n = 2,048 prenatal scholars · Adjusted for paternal email signature length</text>
+</svg>

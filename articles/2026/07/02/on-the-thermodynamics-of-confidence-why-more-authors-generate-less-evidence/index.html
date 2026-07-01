@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" data-preset="institutional">
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>
+  (() => {
+    try {
+      const stored = window.localStorage.getItem("shitColorMode");
+      if (stored) {
+        document.documentElement.setAttribute("data-color-mode", stored);
+        document.documentElement.setAttribute("data-color-mode-choice", stored);
+      } else {
+        const prefersDark = window.matchMedia?.("(prefers-color-scheme: dark)").matches;
+        const initial = prefersDark ? "dark" : "light";
+        window.localStorage.setItem("shitColorMode", initial);
+        document.documentElement.setAttribute("data-color-mode", initial);
+        document.documentElement.setAttribute("data-color-mode-choice", initial);
+      }
+    } catch (_) {}
+  })();
+</script>
+<title>On the Thermodynamics of Confidence: Why More Authors Generate Less Evidence | SHIT</title>
+<meta name="description" content="A professional-looking Hexo journal theme for fictional scholarship, AI-generated hallucinations, academic satire, useful absurdities, and official-looking nonsense. Satirical content notice applies." />
+<meta property="og:title" content="On the Thermodynamics of Confidence: Why More Authors Generate Less Evidence" />
+<meta property="og:description" content="A professional-looking Hexo journal theme for fictional scholarship, AI-generated hallucinations, academic satire, useful absurdities, and official-looking nonsense." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/on-the-thermodynamics-of-confidence-why-more-authors-generate-less-evidence/" />
+<meta property="og:image" content="https://jiehua1995.github.io/hexo-theme-shit/images/shit-seal.svg/" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="canonical" href="https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/on-the-thermodynamics-of-confidence-why-more-authors-generate-less-evidence/" />
+<link rel="icon" href="/hexo-theme-shit/images/shit-seal.svg" />
+<link rel="alternate" type="application/rss+xml" title="SHIT RSS" href="/hexo-theme-shit/atom.xml" />
+<link rel="stylesheet" href="/hexo-theme-shit/css/main.css" />
+
+  <!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 8.1.2"></head>
+  <body
+    class="journal-body"
+    data-locale="en"
+    data-ui-copy-code="Copy code"
+    data-ui-copied="Copied"
+    data-ui-copy-failed="Copy failed"
+    data-ui-search-loading="Loading index of official-looking nonsense..."
+    data-ui-search-ready="__COUNT__ records ready for inspection."
+    data-ui-search-results-for="__COUNT__ result__SUFFIX__ for &#34;__QUERY__&#34;."
+    data-ui-search-empty-title="No results found"
+    data-ui-search-empty-text="Try a title fragment, an author name, a tag, or a collection keyword."
+    data-ui-search-failed="Search index could not be loaded."
+    data-ui-mode-light="Light mode"
+    data-ui-mode-dark="Dark mode"
+    data-ui-toggle-theme="Toggle color mode"
+  >
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-white focus:px-3 focus:py-2 focus:text-sm">Skip to content</a>
+    
+  <section class="satire-banner is-sticky" data-dismissible="true">
+    <div class="container-wide satire-banner-inner">
+      <div>
+        <strong>Satirical Content Notice:</strong>
+        <span>SHIT publishes fictional, humorous, and intentionally absurd content. Nothing on this site should be interpreted as scientific, medical, legal, financial, academic, immigration, career, or professional advice.</span>
+      </div>
+      
+        <button class="dismiss-banner" type="button" aria-label="Dismiss notice">Dismiss</button>
+      
+    </div>
+  </section>
+
+
+    <div class="site-search-shell" id="site-search-dialog" data-index-url="/hexo-theme-shit/search-index.json" hidden aria-hidden="true">
+      <div class="site-search-backdrop" data-search-close="true"></div>
+      <section class="site-search-panel" aria-label="Site search">
+        <div class="site-search-head">
+          <div>
+            <div class="eyebrow">Search</div>
+            <h2 class="section-title">Find articles, pages, and structured nonsense</h2>
+          </div>
+          <button class="dismiss-banner search-close" type="button" data-search-close="true" aria-label="Close">
+            <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+            <span class="sr-only">Close</span>
+          </button>
+        </div>
+        <label class="search-input-wrap" for="site-search-input">
+          <span class="sr-only">Search</span>
+          <input id="site-search-input" class="search-input" type="search" placeholder="Search by title, author, tag, abstract, or collection" autocomplete="off" />
+        </label>
+        <p class="metric-inline search-status" id="site-search-status">Type to search the current issue, archive, and static pages.</p>
+        <div class="search-results" id="site-search-results"></div>
+      </section>
+    </div>
+    <div class="journal-shell">
+      <header class="masthead">
+  <div class="container-wide masthead-inner">
+    <a class="brand-lockup" href="/hexo-theme-shit/">
+      <img class="brand-seal" src="/hexo-theme-shit/images/shit-seal.svg" alt="SHIT seal" />
+      <div>
+        <div class="brand-short">SHIT</div>
+        <div class="brand-full">Society for Hyperbolic and Imaginary Theories</div>
+      </div>
+    </a>
+    <div class="masthead-meta">
+      <div>Official-looking scholarship for fictional findings.</div>
+      <div>ISSN 2049-0001 | eISSN 2049-0002</div>
+      <div>Society for Hyperbolic and Imaginary Theories | Berlin / Internet / Reviewer 2&#39;s imagination</div>
+    </div>
+  </div>
+</header>
+
+      <nav class="main-nav" aria-label="Main navigation">
+  <div class="container-wide nav-inner">
+    
+      <a href="/" class="">Home</a>
+    
+      <a href="/articles/" class="">Articles</a>
+    
+      <a href="/current-issue/" class="">Current Issue</a>
+    
+      <a href="/collections/" class="">Collections</a>
+    
+      <a href="/policies/" class="">Policies</a>
+    
+      <a href="/editorial-board/" class="">Editorial Board</a>
+    
+      <a href="/submit/" class="">Submit</a>
+    
+    <div class="nav-actions">
+      <button class="nav-icon-button nav-search-trigger" type="button" data-search-open="true" aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="Search">
+        <i class="fa-solid fa-magnifying-glass" aria-hidden="true"></i>
+        <span class="sr-only">Search</span>
+      </button>
+      <button class="nav-icon-button nav-theme-toggle" type="button" data-color-mode-toggle="true" aria-label="Toggle color mode">
+        <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+        <span class="sr-only">Toggle color mode</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+      <main id="main-content" class="journal-main">
+        <article class="article-layout">
+  <div class="article-primary">
+    
+<header class="article-header">
+  <div class="notice-row">
+  
+    <span class="notice-badge">SATIRE</span>
+  
+    <span class="notice-badge">FICTIONAL STUDY</span>
+  
+    <span class="notice-badge">AI-GENERATED</span>
+  
+    <span class="notice-badge">NOT PROFESSIONAL ADVICE</span>
+  
+    <span class="notice-badge">DOI-LIKE IDENTIFIER ONLY</span>
+  
+    <span class="notice-badge">FICTIONAL THEORY</span>
+  
+</div>
+
+  <div class="meta-line">Theoretical Framework | Article V1I2-01</div>
+  <h1 class="article-title">On the Thermodynamics of Confidence: Why More Authors Generate Less Evidence</h1>
+  <p class="article-subtitle">A heat-engine model of academic optimism</p>
+  
+  <p class="meta-authors">
+    
+      <span>热能 Clausius, Department of Enthusiastic Inference</span>
+    
+  </p>
+
+
+  
+  <ul class="affiliation-list">
+    
+      <li>Department of Enthusiastic Inference</li>
+    
+  </ul>
+
+
+  <div class="article-meta-grid">
+    <div><strong>Article No.</strong><span>V1I2-01</span></div>
+    <div><strong>Published</strong><span>02 Jul 2026</span></div>
+    <div><strong>Updated</strong><span>01 Jul 2026</span></div>
+    <div><strong>Issue</strong><span>Volume 1 | Issue 2 | 202607</span></div>
+    <div><strong>Pages</strong><span>1-14</span></div>
+    <div><strong>SHIT ID</strong><span>shit.2026.07.02</span></div>
+    <div><strong>DOI-like</strong><span>10.shit/2026.07.02.on-the-thermodynamics-of-confidence-why-more-authors-generate-less-evidence (not a DOI)</span></div>
+    <div><strong>Permanent URL</strong><span><a href="https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/on-the-thermodynamics-of-confidence-why-more-authors-generate-less-evidence/">https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/on-the-thermodynamics-of-confidence-why-more-authors-generate-less-evidence/</a></span></div>
+  </div>
+  
+  <section class="abstract-box">
+    <h2>Abstract</h2>
+    <p>Here we propose that academic confidence obeys a thermodynamic-like relationship wherein author count scales inversely with evidentiary yield.
+</p>
+    
+      <p class="meta-keywords"><strong>Keywords:</strong> confidence, heat engine, evidence entropy</p>
+    
+  </section>
+
+
+</header>
+
+    <section class="article-body"><p>由AI幽默专家编造。</p>
+<h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>In physical systems, adding energy can produce work. In academic systems, adding authors tends to produce hedging. This paper proposes a quantitative model of the relationship.</p>
+<p>The central hypothesis is that confidence behaves like thermal energy: it can be concentrated in a single author or distributed across many, but the total useful work — defined as the capacity to make a statement without qualification — decreases as distribution increases.</p>
+<h2 id="The-Confidence-Heat-Engine"><a href="#The-Confidence-Heat-Engine" class="headerlink" title="The Confidence Heat Engine"></a>The Confidence Heat Engine</h2><p>We define the confidence heat engine as follows. Let N be the number of authors and E be the total evidence available. The engine operates in two strokes:</p>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>W</mi><mrow><mi>c</mi><mi>o</mi><mi>n</mi><mi>f</mi><mi>i</mi><mi>d</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi></mrow></msub><mo>=</mo><mi>η</mi><mo>⋅</mo><mi>E</mi><mo>⋅</mo><mfrac><mn>1</mn><mi>N</mi></mfrac></mrow><annotation encoding="application/x-tex">W_{confidence} = \eta \cdot E \cdot \frac{1}{N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.1389em;">W</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.1389em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">co</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight" style="margin-right:0.1076em;">f</span><span class="mord mathnormal mtight">i</span><span class="mord mathnormal mtight">d</span><span class="mord mathnormal mtight">e</span><span class="mord mathnormal mtight">n</span><span class="mord mathnormal mtight">ce</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6389em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.0359em;">η</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.0576em;">E</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1901em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8451em;"><span style="top:-2.655em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.109em;">N</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>
+
+<p>where \eta is the institutional enthusiasm coefficient, typically between 0.1 and 0.9 depending on whether the laboratory has a new sign.</p>
+<p>The engine reaches maximum efficiency when N &#x3D; 1 and E &#x3D; 0. This corresponds to the optimal condition for speculative language: no evidence to contradict the claims.</p>
+<h2 id="Entropy-of-Authorship"><a href="#Entropy-of-Authorship" class="headerlink" title="Entropy of Authorship"></a>Entropy of Authorship</h2><p>We define authorship entropy as:</p>
+<span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>a</mi><mi>u</mi><mi>t</mi><mi>h</mi><mi>o</mi><mi>r</mi><mi>s</mi><mi>h</mi><mi>i</mi><mi>p</mi></mrow></msub><mo>=</mo><mo>−</mo><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>N</mi></msubsup><msub><mi>p</mi><mi>i</mi></msub><mi>log</mi><mo>⁡</mo><msub><mi>p</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">S_{authorship} = -\sum_{i=1}^{N} p_i \log p_i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9694em;vertical-align:-0.2861em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.0576em;">S</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0576em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">a</span><span class="mord mathnormal mtight">u</span><span class="mord mathnormal mtight">t</span><span class="mord mathnormal mtight">h</span><span class="mord mathnormal mtight" style="margin-right:0.0278em;">or</span><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">hi</span><span class="mord mathnormal mtight">p</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.2809em;vertical-align:-0.2997em;"></span><span class="mord">−</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop"><span class="mop op-symbol small-op" style="position:relative;top:0em;">∑</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9812em;"><span style="top:-2.4003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.2029em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.109em;">N</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2997em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.0139em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal">p</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3117em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>
+
+<p>where p_i represents each author’s proportional contribution to hedging language. Maximum entropy occurs when all authors contribute equally to saying “further work is needed.”</p>
+<p>Empirical observations across 1,247 fictional papers suggest that S_{authorship} increases monotonically with N but evidence quality decreases exponentially, producing a crossover point at approximately N &#x3D; 3.7 where the paper becomes collectively certain about nothing.</p>
+<h2 id="Phase-Transitions"><a href="#Phase-Transitions" class="headerlink" title="Phase Transitions"></a>Phase Transitions</h2><p>At high author counts (N &gt; 10), confidence undergoes a phase transition from “confident but uncertain” to “uncertain but confident.” The paper no longer claims anything definitively, yet every sentence sounds definitive. This is the academic equivalent of superfluidity: the text flows effortlessly past scrutiny with zero evidentiary friction.</p>
+<h2 id="Discussion"><a href="#Discussion" class="headerlink" title="Discussion"></a>Discussion</h2><p>The thermodynamics of confidence suggest that the most efficient evidence generators are solitary authors working in windowless offices with a strong opinion and a weak literature review.</p>
+<p>Institutional policies that promote authorship for breadth may inadvertently optimize for low-evidence, high-verbal-output configurations. We recommend that funding agencies consider author-count penalties calibrated to the inverse of evidentiary yield.</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><ol>
+<li>Clausius R. Enthusiastic inference without evidence. Journal of Academic Thermodynamics. 2025.</li>
+<li>Carnot S. Imaginary cycles of academic justification. Annales de la Fausse Pensee. 2023.</li>
+</ol>
+</section>
+    
+      <section class="section-block">
+        <div class="card-stack">
+          
+            <article class="sidebar-card">
+              <h3>Data Availability</h3>
+              <p>Entropy calculations available in the supplementary imagination.</p>
+            </article>
+          
+          
+            <article class="sidebar-card">
+              <h3>Code Availability</h3>
+              <p>None; the equations are too confident to be coded.</p>
+            </article>
+          
+          
+            <article class="sidebar-card">
+              <h3>Competing Interests</h3>
+              <p>The author has authored everything alone and it was very confident.</p>
+            </article>
+          
+        </div>
+      </section>
+    
+  </div>
+  
+    <aside class="article-sidebar">
+      <section class="sidebar-card">
+  <h3>Article Metrics</h3>
+  <dl class="definition-list">
+    
+      <dt>Absurdity Score</dt>
+      <dd>94</dd>
+    
+      <dt>Plausibility Index</dt>
+      <dd>76</dd>
+    
+      <dt>Reviewer 2 Risk</dt>
+      <dd>Moderate</dd>
+    
+      <dt>Evidence Status</dt>
+      <dd>Warm but diffuse</dd>
+    
+      <dt>Reproducibility</dt>
+      <dd>Pending</dd>
+    
+  </dl>
+</section>
+
+      <section class="sidebar-card">
+  <div class="section-heading-row citation-heading-row">
+    <h3>How to Cite</h3>
+    <button type="button" class="copy-citation" data-citation="热能 Clausius (2026). On the Thermodynamics of Confidence: Why More Authors Generate Less Evidence. SHIT. Article V1I2-01. https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/on-the-thermodynamics-of-confidence-why-more-authors-generate-less-evidence/">Copy citation</button>
+  </div>
+  <p class="citation-text">热能 Clausius (2026). On the Thermodynamics of Confidence: Why More Authors Generate Less Evidence. SHIT. Article V1I2-01. https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/on-the-thermodynamics-of-confidence-why-more-authors-generate-less-evidence/</p>
+  <p class="citation-text"><strong>Permanent URL:</strong> <a href="https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/on-the-thermodynamics-of-confidence-why-more-authors-generate-less-evidence/">https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/on-the-thermodynamics-of-confidence-why-more-authors-generate-less-evidence/</a></p>
+</section>
+
+      
+  <section class="sidebar-card">
+    <h3>Table of Contents</h3>
+    <div class="toc-wrap"><ol class="toc-list"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#Introduction"><span class="toc-list-text">Introduction</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#The-Confidence-Heat-Engine"><span class="toc-list-text">The Confidence Heat Engine</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#Entropy-of-Authorship"><span class="toc-list-text">Entropy of Authorship</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#Phase-Transitions"><span class="toc-list-text">Phase Transitions</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#Discussion"><span class="toc-list-text">Discussion</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#References"><span class="toc-list-text">References</span></a></li></ol></div>
+  </section>
+
+
+      <section class="sidebar-card">
+        <h3>Article Information</h3>
+        <dl class="definition-list">
+          <dt>Article No.</dt><dd>V1I2-01</dd>
+          <dt>SHIT ID</dt><dd>shit.2026.07.02</dd>
+          <dt>Type</dt><dd>Theoretical Framework</dd>
+          <dt>Published</dt><dd>02 Jul 2026</dd>
+          <dt>Updated</dt><dd>01 Jul 2026</dd>
+          <dt>DOI-like</dt><dd>10.shit/2026.07.02.on-the-thermodynamics-of-confidence-why-more-authors-generate-less-evidence</dd>
+          <dt>Permanent URL</dt><dd><a href="https://jiehua1995.github.io/hexo-theme-shit/articles/2026/07/02/on-the-thermodynamics-of-confidence-why-more-authors-generate-less-evidence/">Open canonical article</a></dd>
+          <dt>Keywords</dt><dd>confidence, heat engine, evidence entropy</dd>
+        </dl>
+      </section>
+      
+        <section class="sidebar-card">
+          <h3>Project Links</h3>
+          <div class="stack-links">
+            
+              <a class="text-link" target="_blank" rel="noopener" href="https://github.com/example/hexo-theme-shit/edit/main/source/_posts/on-the-thermodynamics-of-confidence-why-more-authors-generate-less-evidence.md">Edit source on GitHub</a>
+            
+            <a class="text-link" target="_blank" rel="noopener" href="https://github.com/example/hexo-theme-shit/issues">Open issue tracker</a>
+          </div>
+        </section>
+      
+    </aside>
+  
+</article>
+
+      </main>
+      <footer class="site-footer">
+  <div class="container-wide footer-grid">
+    <div>
+      <div class="brand-short">SHIT</div>
+      <p>Wrong, but beautifully formatted.</p>
+      <p class="footer-note">Nothing here constitutes professional advice. Some of it barely constitutes content.</p>
+      
+      <p class="footer-note footer-theme-credit">
+        
+          Theme powered by <a target="_blank" rel="noopener" href="https://github.com/example/hexo-theme-shit">hexo-theme-shit v1.0.0</a>.
+        
+      </p>
+    </div>
+    <div>
+      <h3>Quick Links</h3>
+      <div class="stack-links">
+        
+          <a href="/policies/">Policies</a>
+        
+          <a href="/for-authors/">For Authors</a>
+        
+          <a href="/submit/">Submit</a>
+        
+      </div>
+    </div>
+    <div>
+      <h3>Elsewhere</h3>
+      <div class="stack-links">
+        
+          <a target="_blank" rel="noopener" href="https://github.com/example/hexo-theme-shit">GitHub</a>
+        
+          <a target="_blank" rel="noopener" href="https://github.com/example/hexo-theme-shit/discussions">Discussions</a>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <button class="back-to-top" type="button" aria-label="Back to top">
+      <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
+      <span class="sr-only">Back to top</span>
+    </button>
+    <script src="/hexo-theme-shit/js/main.js"></script>
+  </body>
+</html>
