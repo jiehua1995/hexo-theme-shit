@@ -134,9 +134,10 @@ hexo.extend.helper.register("shit_link_label", (item) => {
   return resolveLocalizedValue(item.label, currentLocale()) || item.label;
 });
 hexo.extend.helper.register("shit_page_path", (key) => {
-  if (key === "home") return "/";
+  if (key === "home") return url_for("/");
   const page = themeConfig().pages?.[key];
-  return withLeadingSlash(page?.path || key);
+  const raw = withLeadingSlash(page?.path || key);
+  return url_for(raw);
 });
 hexo.extend.helper.register("shit_article_type", articleTypeFor);
 hexo.extend.helper.register("shit_notices", noticesFor);
