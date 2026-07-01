@@ -4,7 +4,7 @@
     : `${shit_page_path('articles')}?issue=${issue.id}`;
 %>
 <article class="issue-card">
-  <a href="<%= issueHref %>"><img src="<%= issue.cover %>" alt="<%= issue.title %> cover placeholder" /></a>
+  <a href="<%= issueHref %>"><img src="<%- url_for(issue.cover) %>" alt="<%= issue.title %> cover placeholder" /></a>
   <div>
     <div class="meta-line"><%= `Volume ${issue.volume} | Issue ${issue.issue} | ${issue.date}` %></div>
     <h3><a href="<%= issueHref %>"><%= issue.title %></a></h3>

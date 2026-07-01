@@ -17,7 +17,7 @@
       <h3><%= shit_ui('quick_links') %></h3>
       <div class="stack-links">
         <% theme.footer.links.forEach((link) => { %>
-          <a href="<%= link.path %>"><%= shit_link_label(link) %></a>
+          <a href="<%- url_for(link.path) %>"><%= shit_link_label(link) %></a>
         <% }) %>
       </div>
     </div>
@@ -25,7 +25,7 @@
       <h3><%= shit_ui('elsewhere') %></h3>
       <div class="stack-links">
         <% theme.footer.social_links.forEach((link) => { %>
-          <a href="<%= link.path %>"><%= shit_link_label(link) %></a>
+          <a href="<%- url_for(link.path) %>"><%= shit_link_label(link) %></a>
         <% }) %>
       </div>
     </div>

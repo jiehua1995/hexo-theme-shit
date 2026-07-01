@@ -1,7 +1,7 @@
 <nav class="main-nav" aria-label="Main navigation">
   <div class="container-wide nav-inner">
     <% theme.navigation.forEach((item) => { %>
-      <a href="<%= item.path %>" class="<%= url_for(page.path || '/') === item.path ? 'is-active' : '' %>"><%= shit_link_label(item) %></a>
+      <a href="<%- url_for(item.path) %>" class="<%= is_current(item.path) ? 'is-active' : '' %>"><%= shit_link_label(item) %></a>
     <% }) %>
     <div class="nav-actions">
       <button class="nav-icon-button nav-search-trigger" type="button" data-search-open="true" aria-haspopup="dialog" aria-controls="site-search-dialog" aria-label="<%= shit_ui('search') %>">
