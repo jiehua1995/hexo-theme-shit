@@ -1,4 +1,4 @@
-# SHIT Journal Theme
+# hexo-theme-shit
 
 [中文文档](./README_CN.md)
 
