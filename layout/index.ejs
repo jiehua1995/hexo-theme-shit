@@ -57,7 +57,7 @@
           <p class="metric-inline"><%= shit_metrics_compact(featured) %></p>
         </div>
         <a class="figure-card" href="<%= url_for(featured.path) %>">
-          <img src="<%= url_for('/images/article-placeholder.svg') %>" alt="Featured article placeholder" />
+          <%- image_tag('images/article-placeholder.svg', { alt: 'Featured article placeholder' }) %>
         </a>
       </article>
     </section>

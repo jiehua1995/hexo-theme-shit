@@ -134,10 +134,9 @@ hexo.extend.helper.register("shit_link_label", (item) => {
   return resolveLocalizedValue(item.label, currentLocale()) || item.label;
 });
 hexo.extend.helper.register("shit_page_path", (key) => {
-  if (key === "home") return url_for("/");
+  if (key === "home") return hexo.extend.helper.get("url_for").call(hexo, "/");
   const page = themeConfig().pages?.[key];
-  const raw = withLeadingSlash(page?.path || key);
-  return url_for(raw);
+  return hexo.extend.helper.get("url_for").call(hexo, page?.path || key);
 });
 hexo.extend.helper.register("shit_article_type", articleTypeFor);
 hexo.extend.helper.register("shit_notices", noticesFor);
@@ -180,9 +179,7 @@ hexo.extend.helper.register("shit_citation", (post) => {
   return `${authors} (${year}). ${post.title}. ${journal}. Article ${articleNumber}. ${permalink}`;
 });
 hexo.extend.helper.register("shit_absolute_url", (inputPath = "") => {
-  const siteUrl = withoutTrailingSlash(hexo.config.url || "");
-  const localPath = withLeadingSlash(inputPath);
-  return siteUrl ? `${siteUrl}${localPath}` : localPath;
+  return hexo.extend.helper.get("full_url_for").call(hexo, inputPath);
 });
 hexo.extend.helper.register("shit_article_number", (post) => {
   if (post.article_number) return post.article_number;
