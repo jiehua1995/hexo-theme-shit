@@ -1,272 +1,346 @@
-# hexo-theme-shit
+# SHIT Journal Theme
 
-> **一本正经地胡说八道。** A Hexo theme that looks like a serious academic journal while publishing AI-generated nonsense, academic satire, and fictionally formatted hallucinations.
+[中文文档](./README_CN.md)
 
-![Preview](https://img.shields.io/badge/Hexo-8.x-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
+> **A Hexo theme that makes everything look like a real academic journal — when nothing in it is real.**
 
----
-
-## 📖 关于主题 / About
-
-**hexo-theme-shit** 是一个外观像正经学术期刊的 Hexo 主题，专门用于发布由 AI 生成的虚构学术文章、学术讽刺内容和一本正经的胡说八道。
-
-所有文章内容均为 **AI 虚构/讽刺创作**，不构成任何科学、医学、法律或专业建议。
-
-hexo-theme-shit is a Hexo theme that looks like a serious academic journal while publishing AI-generated fictional scholarship, academic satire, and professionally formatted nonsense.
-
-All article content is **AI-generated fiction/satire** and should not be interpreted as scientific, medical, legal, or professional advice.
-
-### ✨ 核心特色 / Features
-
-- 完整的学术期刊风格：首页、文章页、存档页和多个内部页面
-- 配置驱动：支持自定义品牌、导航、公告、指标、文章类型、合集、期刊号和编委会
-- 8 种视觉预设：classic、nature、cell、lancet、arxiv、institutional、minimal、absurdist
-- 内置讽刺声明和免责声明
-- GitHub Issues 投稿工作流（可自定义）
-- 双语支持（中/英）
+**SHIT** = **S**ociety for **H**yperbolic and **I**maginary **T**heories
 
 ---
 
-## 🚀 快速开始 / Quick Start
+## 🔬 What is this?
 
-### 1. 初始化项目
+This is a **Hexo theme** that turns your blog into a professional-looking academic journal. Every article on this site is **AI-generated fiction, satire, and absurdist humor**. Nothing you read here is real science, real research, or real advice. It's all made up — but it looks ridiculously official doing it.
+
+### Can I use it for a real blog?
+
+**Yes, absolutely.** While the default content is all AI-generated nonsense, the theme itself is a fully functional Hexo theme. You can:
+
+- Write real articles with the same beautiful formatting
+- Customize everything to your liking
+- Use it as a personal blog, portfolio, or publication site
+- Remove or modify the satire elements
+
+## ⚠️ Disclaimer
+
+All articles, authors, data, metrics, and editorial board members displayed in this theme's demo content are **entirely fictional and AI-generated**. They exist for satirical and humorous purposes only.
+
+---
+
+## 🚀 Quick Start
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) ≥ 14.x
+- [Hexo](https://hexo.io/) ≥ 6.x
+
+### Installation
 
 ```bash
-npx hexo init . --no-install
-cd .
+# Install Hexo if you haven't
+npm install -g hexo-cli
+
+# Initialize a new site (or use existing one)
+hexo init my-blog
+cd my-blog
+
+# Install the theme
+git clone https://github.com/example/hexo-theme-shit themes/hexo-theme-shit
+
+# Configure your site's _config.yml
+# Set theme: hexo-theme-shit
 ```
 
-### 2. 安装主题
+### Deploy to GitHub Pages
 
-将主题放到 `themes/hexo-theme-shit/` 目录：
+The recommended way to deploy is via GitHub Pages + GitHub Actions.
+
+1. **Fork or clone** this repo as your own repository (e.g. `yourname/yourblog.github.io`)
+
+2. **Configure your site's `_config.yml`** — set the correct URL:
+   ```yaml
+   # For username.github.io:
+   url: https://username.github.io
+   root: /
+
+   # For username.github.io/blog:
+   url: https://username.github.io
+   root: /blog/
+   ```
+
+3. **Commit and push** your changes to the `main` branch
+
+4. **Enable GitHub Pages:**
+   - Go to your repo → **Settings** → **Pages**
+   - Under **Source**, select **GitHub Actions**
+   - Save the settings
+
+5. The included GitHub Actions workflow (`/.github/workflows/`) will automatically build and deploy your site on every push to `main`.
+
+### Run Locally (for preview)
+
+If you want to preview locally before deploying:
 
 ```bash
-git clone https://github.com/your-username/hexo-theme-shit.git themes/hexo-theme-shit
+npm install
+hexo server
+# Open http://localhost:4000
 ```
 
-然后在站点根目录的 `_config.yml` 中设置：
+---
+
+## ⚙️ Configuration
+
+The theme configuration is in **`themes/hexo-theme-shit/_config.yml`**.
+
+See the `_config.yml` file for **detailed bilingual (Chinese/English) comments** explaining every option. Here's a quick overview:
+
+### Key Settings
+
+| Section | Description |
+|---------|-------------------|
+| `journal` | Journal identity: name, tagline, logo, ISSN, etc. |
+| `style` | Appearance: color scheme, typography, layout width, dark mode |
+| `satire_banner` | Control the satire/disclaimer banner at the top |
+| `navigation` | Menu items in the top navigation bar |
+| `homepage` | Which sections to show on the homepage |
+| `pages` | Enable/disable built-in pages (About, Policies, etc.) |
+| `issues` | Journal issues: volume, number, cover image, featured article |
+| `collections` | Themed article collections |
+| `article_types` | Article type categories with colors and icons |
+| `metrics` | Fake academic metrics to display |
+| `editorial_board` | Fictional editorial board members |
+| `github` | GitHub repo, issues, and discussion links |
+
+---
+
+## 🎨 Customization
+
+### 1. Change Journal Identity
+
+Edit the `journal` section in `_config.yml`:
 
 ```yaml
-theme: hexo-theme-shit
+journal:
+  short_name: MyJournal        # Short name
+  full_name: My Journal        # Full name
+  tagline: Real science for real people  # Tagline
+  slogan: Seriously, this is fake.  # Slogan
+  logo: /images/my-logo.svg     # Logo path
+  favicon: /images/my-favicon.ico  # Favicon
 ```
 
-### 3. 安装依赖
-
-```bash
-yarn install
-```
-
-### 4. 启动站点
-
-```bash
-yarn start
-```
-
-站点将在 `http://localhost:4000` 运行。
-
----
-
-## ⚙️ 配置说明 / Configuration
-
-主题的所有配置都在 `themes/hexo-theme-shit/_config.yml` 中，详细的配置说明见该文件内的中英双语注释。
-
-以下是主要配置区域概览：
-
-| 区域 | 说明 / Description |
-|------|-------------------|
-| `journal` | 期刊品牌信息（名称、标语、Logo 等）/ Journal branding |
-| `style` | 视觉风格预设和排版设置 / Visual presets and typography |
-| `i18n` | 语言设置 / Language configuration |
-| `satire_banner` | 讽刺声明横幅 / Satire notice banner |
-| `navigation` | 顶部导航栏 / Top navigation |
-| `homepage` | 首页模块开关和排序 / Homepage section toggles |
-| `pages` | 各内部页面开关、标题和路径 / Page enable/disable |
-| `article_types` | 自定义文章类型和颜色 / Custom article types |
-| `metrics` | 期刊指标标签和默认值 / Journal metrics |
-| `github` | GitHub 仓库和投稿链接 / GitHub integration |
-| `editorial_board` | 编委会成员卡片 / Editorial board members |
-| `collections` | 内容合集分类 / Content collections |
-| `issues` | 期刊号定义 / Issue definitions |
-
-> 💡 **详细的中英双语配置注释请查看 `_config.yml` 文件。**
-
----
-
-## ✍️ 写一篇文章 / Writing Articles
-
-在 `source/_posts/` 目录下创建 Markdown 文件，使用标准 Hexo 前后端语法。示例：
-
-```yaml
----
-title: 一个虚构的研究发现
-subtitle: 副标题
-article_type: Useful Absurdity
-issue_id: 202607
-collection: Useful Absurdities
-authors:
-  - name: 张三
-    affiliation: 虚构大学 nonsense 学院
-notices:
-  - SATIRE
-  - AI-GENERATED
-metrics:
-  absurdity_score: 97
-  plausibility_index: 88
-abstract: >
-  这里是摘要。
----
-```
-
-### 支持的文章元字段 / Supported Front Matter Fields
-
-| 字段 | 说明 |
-|------|------|
-| `title` | 标题 / Title |
-| `subtitle` | 副标题 / Subtitle |
-| `article_type` | 文章类型（需与 _config.yml 中定义匹配） |
-| `issue_id` | 期刊号 |
-| `collection` | 合集分类 |
-| `authors` | 作者列表（数组，每个含 name 和 affiliation） |
-| `affiliations` | 作者单位列表 |
-| `published` | 发布日期 |
-| `volume` / `issue` | 卷号和期号 |
-| `pages` | 页码范围 |
-| `shit_id` | 文章唯一标识 |
-| `doi_like` | 类 DOI 标识符 |
-| `keywords` | 关键词列表 |
-| `notices` | 声明标签（如 SATIRE、AI-GENERATED） |
-| `metrics` | 期刊指标（absurdity_score 等） |
-| `abstract` | 摘要 |
-| `data_availability` | 数据可用性声明 |
-| `code_availability` | 代码可用性声明 |
-| `competing_interests` | 利益冲突声明 |
-
----
-
-## 🎨 自定义主题 / Customization
-
-### 切换视觉预设
-
-编辑 `_config.yml`：
+### 2. Change Colors & Style
 
 ```yaml
 style:
-  preset: nature  # 可选: classic, nature, cell, lancet, arxiv, institutional, minimal, absurdist
+  preset: institutional       # Preset: institutional / academic / modern
+  color_mode: system          # Mode: system (follows OS) / light / dark
+  dark_mode: true             # Enable dark mode
+  layout_width: 1280px        # Max layout width
 ```
 
-### 自定义文章类型
+### 3. Add Your Articles
 
-在 `_config.yml` 的 `article_types` 中添加或修改：
+Create markdown files in `source/_posts/`. Each article supports front-matter metadata:
 
 ```yaml
-article_types:
-  - name: My Custom Type
-    slug: my-custom-type
-    color: "#ff0000"
-    icon: MC
-    description: 我的自定义类型 / My custom type description
-    default_notices: [SATIRE, FICTIONAL STUDY]
+---
+title: "My Real Article"
+date: 2026-07-01
+category:
+  - Real Research
+tags:
+  - real
+  - data
+article_type: retraction-ready-report  # Optional, see article types below
+metrics:
+  absurdity_score: 10
+  plausibility_index: 95
+  evidence_status: Solid
+---
+
+Your article content here...
 ```
 
-### 自定义编委会
+### 4. Configure Pages
 
-在 `_config.yml` 的 `editorial_board` 中修改：
-
-```yaml
-editorial_board:
-  - name: Dr. Your Name
-    role: Editor-in-Chief
-    affiliation: Your University
-    avatar: /images/your-avatar.svg
-    bio: Your bio here.
-    orcid: 0000-0000-0000-0000
-    research_interests: [your, interests]
-```
-
-### 自定义期刊号和合集
-
-- **期刊号**：在 `issues` 中添加/修改
-- **合集**：在 `collections` 中添加/修改
-
-### 自定义页面
-
-在 `pages` 中控制各页面的启用状态、标题和路径：
+Enable or disable built-in pages in `_config.yml`:
 
 ```yaml
 pages:
   articles:
+    enabled: true        # Enable
+    title: Articles      # Page title
+    path: articles       # URL path
+  about:
     enabled: true
-    title: 文章 / Articles
-    path: articles
-    description: 文章描述 / Description in both languages
-  faq:
-    enabled: false  # 禁用某个页面
+    title: About
+    path: about
 ```
 
----
+### 5. Custom CSS
 
-## 📄 内置页面 / Built-In Pages
+Place your custom CSS in `source/css/_custom.styl` (or `.css`), and it will be automatically included.
 
-每个页面均可通过 `pages` 配置独立控制：
+### 6. Custom Images
 
-| 页面 | 路径 | 说明 |
-|------|------|------|
-| Articles | `/articles/` | 文章存档 |
-| Current Issue | `/current-issue/` | 当前期刊号 |
-| Issues | `/issues/` | 历史期刊号 |
-| Collections | `/collections/` | 合集分类 |
-| Submit | `/submit/` | 投稿指南 |
-| For Authors | `/for-authors/` | 作者指南 |
-| Policies | `/policies/` | 政策声明 |
-| Editorial Board | `/editorial-board/` | 编委会 |
-| About | `/about/` | 关于 |
-| Indexing | `/indexing/` | 收录信息 |
-| Metrics | `/metrics/` | 期刊指标 |
-| Announcements | `/announcements/` | 公告 |
-| Special Issues | `/special-issues/` | 特刊 |
-| FAQ | `/faq/` | 常见问题 |
+Replace images in `themes/hexo-theme-shit/source/images/`:
+
+- `shit-seal.svg` → Logo / Seal
+- `avatar-1.svg` ~ `avatar-4.svg` → Editor avatars
+- `issue-cover-*.svg` → Issue covers
 
 ---
 
-## 🌐 双语支持 / i18n
+## 📄 Built-in Pages
 
-编辑 `_config.yml`：
+| Page | Path | Description |
+|------|------|-------------------|
+| Articles | `/articles/` | Article list |
+| Current Issue | `/current-issue/` | Current issue |
+| Issues | `/issues/` | All issues |
+| Collections | `/collections/` | Themed collections |
+| Policies | `/policies/` | Policy statements |
+| Editorial Board | `/editorial-board/` | Editor profiles |
+| Submit | `/submit/` | Submission guide |
+| Metrics | `/metrics/` | Journal metrics |
+| About | `/about/` | About us |
+| FAQ | `/faq/` | Frequently asked questions |
+| For Authors | `/for-authors/` | Author guidelines |
+| Indexing | `/indexing/` | Indexing info |
+| Announcements | `/announcements/` | Announcements |
+| Special Issues | `/special-issues/` | Special issues |
+
+---
+
+## 📝 Article Types
+
+The theme supports 20 article types, each with its own color badge and icon. Customize them in `_config.yml`:
+
+```yaml
+article_types:
+  - name: My Custom Type
+    slug: my-type
+    color: "#ff0000"
+    icon: MC
+    description: A description of this type
+```
+
+**Available types:**
+
+| Type | Icon |
+|------|------|
+| Retraction-Ready Report | RR |
+| Imaginary Dataset | ID |
+| Unnecessary Methods | UM |
+| Computational Daydream | CD |
+| Peer Review Theater | PT |
+| Grant Proposal Fiction | GF |
+| Citation Needed | CN |
+| Synthetic Review | SR |
+| ... and 12 more | |
+
+---
+
+## 🌐 i18n
+
+The theme supports multiple locales. Set the language in `_config.yml`:
 
 ```yaml
 i18n:
-  locale: zh  # 或 en
+  locale: en    # Current locale
+                 # Supported: en / zh
 ```
 
-切换后，所有界面文字和声明都会自动使用对应语言。
+To add Chinese translations, create `themes/hexo-theme-shit/languages/zh.js` with all translation keys.
 
 ---
 
-## 🚢 部署 / Deployment
+## 🛠️ Advanced
 
-生成静态站点：
+### Custom Footer
 
-```bash
-yarn build
-# 或
-yarn build:css && hexo generate
+```yaml
+footer:
+  copyright: Your Name 2026
+  slogan: Your personalized tagline
+  links:
+    - label: GitHub
+      path: https://github.com/your-repo
 ```
 
-生成的静态文件在 `public/` 目录，可部署到 GitHub Pages、Vercel、Netlify 等任何静态托管平台。
+### Social Links
+
+```yaml
+footer:
+  social_links:
+    - label: Twitter
+      path: https://twitter.com/your-handle
+    - label: WeChat
+      path: /wechat-qr.png
+```
+
+### Satire Banner
+
+Control the disclaimer banner:
+
+```yaml
+satire_banner:
+  enabled: true        # Show banner
+  sticky: true         # Stick to top
+  dismissible: true    # Can be dismissed
+  text: Custom disclaimer text...
+  text_zh: 自定义免责声明（中文）...
+```
+
+Set `enabled: false` to hide it entirely if you're using this theme for real content.
 
 ---
 
-## 📝 版权与声明 / License & Disclaimer
+## 📦 Directory Structure
 
-- 主题代码使用 **MIT License** 开源
-- 主题本身是为戏谑和搞笑目的而设计的，所有内容均为虚构
-- 用作个人博客时，请移除或修改讽刺声明
-- 使用本主题发布的文章内容不代表主题作者的立场
+```
+my-blog/
+├── _config.yml              # Hexo site configuration
+├── source/
+│   └── _posts/              # Your articles
+│       ├── article-1.md
+│       └── article-2.md
+├── themes/
+│   └── hexo-theme-shit/
+│       ├── _config.yml      # Theme configuration
+│       ├── layout/          # EJS templates
+│       ├── source/
+│       │   ├── css/         # Stylesheets
+│       │   ├── images/      # Images & icons
+│       │   └── js/          # JavaScript
+│       └── scripts/         # Hexo scripts (helpers, generators)
+```
 
 ---
 
-## 🤝 贡献 / Contributing
+## 🤝 Contributing
 
-欢迎提交 Issue 和 Pull Request！无论是功能改进、bug 修复、新增视觉预设，还是更好的中文本地化，都非常欢迎。
+Contributions welcome! Whether it's:
 
-> 前提：请确保你的改动不会让这份胡说八道变得不够好笑。
+- Fixing bugs
+- Adding features
+- Improving translations
+- Writing new article types
+
+Feel free to open a PR or issue.
+
+---
+
+## 📄 License
+
+[MIT License](./themes/hexo-theme-shit/LICENSE)
+
+---
+
+## 🎭 Made with nonsense
+
+Made by [Society for Hyperbolic and Imaginary Theories](https://github.com/example/hexo-theme-shit).
+
+**Wrong, but beautifully formatted.**
